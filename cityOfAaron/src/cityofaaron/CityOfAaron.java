@@ -5,7 +5,9 @@
  *Team Members: Sam Wagner, Gabriel Gonzales, Oswaldo Rodríguez
  */
 package cityofaaron;
-
+import model.Game;
+import model.Player;
+import model.TeamMember;
 /**
  *
  * @author Own
@@ -17,6 +19,17 @@ public class CityOfAaron {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Player greatPlayer = new Player();
+        greatPlayer.setName("Sam");
+        
+        Game greatGame = new Game();
+        greatGame.setPlayer("Starlord");
+        
+        String name = greatPlayer.getName();
+        System.out.println(name);
+        
+        
+        
     }
     
 }
