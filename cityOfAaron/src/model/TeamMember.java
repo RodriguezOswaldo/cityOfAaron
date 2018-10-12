@@ -23,5 +23,12 @@ TeamMember(String _name, String _title){
 
     name = _name;
     title = _title;
-}
-}
+}        
+    public String getTitle(){
+        return title;
+    }
+    public String getName()
+    {
+       return name; 
+    }
+    }

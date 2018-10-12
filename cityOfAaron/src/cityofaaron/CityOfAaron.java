@@ -28,8 +28,9 @@ public class CityOfAaron {
         String name = greatPlayer.getName();
         System.out.println(name);
         
-        
-        
+        System.out.println(TeamMember.SAM.getName()+ " - " + TeamMember.SAM.getTitle());
+        System.out.println(TeamMember.GABRIEL.getName()+ " - " + TeamMember.GABRIEL.getTitle());
+        System.out.println(TeamMember.OSWALDO.getName()+ " - " + TeamMember.OSWALDO.getTitle());
     }
     
 }
