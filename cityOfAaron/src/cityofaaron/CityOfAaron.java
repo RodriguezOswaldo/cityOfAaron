@@ -8,6 +8,8 @@ package cityofaaron;
 import model.Game;
 import model.Player;
 import model.TeamMember;
+//Oswaldo's Class!
+import model.Location;
 /**
  *
  * @author Own
@@ -24,13 +26,21 @@ public class CityOfAaron {
         
         Game greatGame = new Game();
         greatGame.setPlayer("Starlord");
+        //Oswaldo's class;
+        Location location = new Location();
+        location.setDescription("J't'p'tan");
         
         String name = greatPlayer.getName();
         System.out.println(name);
+        //Oswaldo's class;
+        String description = location.getDescription();
+        System.out.println(description);
         
         System.out.println(TeamMember.SAM.getName()+ " - " + TeamMember.SAM.getTitle());
         System.out.println(TeamMember.GABRIEL.getName()+ " - " + TeamMember.GABRIEL.getTitle());
         System.out.println(TeamMember.OSWALDO.getName()+ " - " + TeamMember.OSWALDO.getTitle());
+        
+        
     }
     
 }
