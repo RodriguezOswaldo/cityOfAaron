@@ -10,6 +10,8 @@ import model.Player;
 import model.TeamMember;
 //Oswaldo's Class!
 import model.Location;
+//Sam's Class!
+import model.ListItem;
 /**
  *
  * @author Own
@@ -30,18 +32,25 @@ public class CityOfAaron {
         Game greatGame = new Game();
         greatGame.setPlayer(greatPlayer);
         
-        //Oswaldo's class;
-        Location location = new Location();
-        location.setDescription("J't'p'tan");
-        
         //player class acting like "string" or "int" primitive data
         Player person = greatGame.getPlayer();
         String name = person.getName();
         System.out.println(name);
         
+        //Oswaldo's Location class;
+        Location location = new Location();
+        location.setDescription("J't'p'tan");
+        
         //Oswaldo's class;
         String description = location.getDescription();
         System.out.println(description);
+        
+        //Sam's ListItem class
+        ListItem randomNumber = new ListItem();
+        randomNumber.setNumber(2);
+        Integer sameRandomNumber = randomNumber.getNumber();
+        System.out.println(sameRandomNumber);
+        
         
         System.out.println(TeamMember.SAM.getName()+ " - " + TeamMember.SAM.getTitle());
         
