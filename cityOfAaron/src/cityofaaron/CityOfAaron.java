@@ -21,25 +21,29 @@ public class CityOfAaron {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+        //set player
         Player greatPlayer = new Player();
         greatPlayer.setName("Sam");
         
+        //set game
         Game greatGame = new Game();
-        greatGame.setPlayer("Starlord");
+        greatGame.setPlayer(greatPlayer);
+        
         //Oswaldo's class;
         Location location = new Location();
         location.setDescription("J't'p'tan");
         
-        String name = greatPlayer.getName();
+        //player class acting like "string" or "int" primitive data
+        Player person = greatGame.getPlayer();
+        String name = person.getName();
         System.out.println(name);
+        
         //Oswaldo's class;
         String description = location.getDescription();
         System.out.println(description);
         
         System.out.println(TeamMember.SAM.getName()+ " - " + TeamMember.SAM.getTitle());
-        System.out.println(TeamMember.GABRIEL.getName()+ " - " + TeamMember.GABRIEL.getTitle());
-        System.out.println(TeamMember.OSWALDO.getName()+ " - " + TeamMember.OSWALDO.getTitle());
-        
         
     }
     
