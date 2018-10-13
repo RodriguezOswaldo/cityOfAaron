@@ -13,15 +13,15 @@ package model;
 import java.io.Serializable;
 public class Game implements Serializable {
     
-    private String thePlayer;
+    private Player thePlayer;
     
     public Game(){}
     
-    public String getPlayer()
+    public Player getPlayer()
     {
          return thePlayer;
     }
-    public void setPlayer(String _thePlayer){
+    public void setPlayer(Player _thePlayer){
         this.thePlayer = _thePlayer;
     }  
 }
