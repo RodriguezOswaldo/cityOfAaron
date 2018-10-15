@@ -5,7 +5,6 @@
  *Team Members: Sam Wagner, Gabriel Gonzales, Oswaldo Rodríguez
  */
 package cityofaaron;
-import model.CropData;
 import model.Game;
 import model.Player;
 import model.TeamMember;
@@ -13,6 +12,8 @@ import model.TeamMember;
 import model.Location;
 //Sam's Class!
 import model.ListItem;
+//Gabriel's Class!
+import model.CropData;
 /**
  *
  * @author Own
