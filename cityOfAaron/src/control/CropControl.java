@@ -25,7 +25,7 @@ public class CropControl
     private static final int ACRE_MAX = 27;
     
     // random number generator
-     Random random = new Random();
+    private static Random random = new Random();
     
     //calcLandCosta() method
     //Purpose: Calculate a random land cost between 17 and 26 bushels/acre
@@ -33,14 +33,12 @@ public class CropControl
     //Returns: the land cost
     public static int calcLandCost()
     {
-         Random random = new Random();
         int landPrice = random.nextInt(LAND_RANGE) + LAND_BASE;
         return landPrice;
     }  
     
     public static int calcAcreCost()
     {
-         Random random = new Random();
         int acrePrice = random.nextInt(ACRE_MAX) + ACRE_MIN;
         return acrePrice;
     } 
