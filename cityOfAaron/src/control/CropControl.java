@@ -25,7 +25,7 @@ public class CropControl
     private static final int ACRE_MAX = 27;
     
     // random number generator
-    private static final Random random = new Random();
+     Random random = new Random();
     
     //calcLandCosta() method
     //Purpose: Calculate a random land cost between 17 and 26 bushels/acre
@@ -33,12 +33,14 @@ public class CropControl
     //Returns: the land cost
     public static int calcLandCost()
     {
+         Random random = new Random();
         int landPrice = random.nextInt(LAND_RANGE) + LAND_BASE;
         return landPrice;
     }  
     
     public static int calcAcreCost()
     {
+         Random random = new Random();
         int acrePrice = random.nextInt(ACRE_MAX) + ACRE_MIN;
         return acrePrice;
     } 
@@ -80,28 +82,36 @@ public class CropControl
 // to 17 and less than or equal to 27 
 
 
-    public static int buyLand(int acrePrice, int acresToBuy, CropData cropData)
+    public static int buyLand(int acresPrice, int acresToBuy, CropData cropData)
     {
-        
+            int totalPrice = 17;
         // if acresToBuy < 0, return -1
             if(acresToBuy < 0) {
-               
-            }
-                
+               System.out.println("A negative value was input.");
+            }        
         // if acresToSell > acresOwned, return -1
-            int owned = cropData.getAcresOwned(); //use the Getter method in the CropData class to get acres owned.
-            if(acresToSell > owned)
-                return -1;
-        // acresOwned = acresOwned - acresToSell
-            owned -= acresToSell;
-            cropData.setAcresOwned(owned); // use the setter method in the cropData class to update the value of acresOwned
-        // wheatInStore = wheatInStore + acresToSell * landPrice
             int wheat = cropData.getWheatInStore();
-            wheat += (acresToSell * landPrice);
-            cropData.setWheatInStore(wheat); //use the setter method inn the cropData class to save wheat in store.
-        // return acresOwned
-        return owned;// return this value so you can test your method against your test matrix.
-    }
+      
+            if (wheat < totalPrice){
+                System.out.println("You don't have enough bushels");
+            }
+        // acresOwned = acresOwned + acresToBuy
+            int acresOwned = cropData.getAcresOwned();
+            if (acresToBuy == 0) {
+                return acresOwned;
+            } else {
+            acresOwned += acresToBuy;
+                System.out.println(acresOwned);
+            
+             wheat -=(totalPrice * acresToBuy);
+                System.out.println(wheat);
+                return acresOwned;
+            }
+          
+              }
     
-}
+                }
 
+
+        
+        
