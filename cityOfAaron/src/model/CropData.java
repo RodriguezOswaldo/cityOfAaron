@@ -43,10 +43,6 @@ public class CropData implements Serializable {
     public CropData() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
-    public CropData() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     
     // Getters and Setters
     public int getYear() {
