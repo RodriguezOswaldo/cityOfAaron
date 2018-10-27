@@ -69,7 +69,44 @@ public class CropControl
         // return acresOwned
         return owned;// return this value so you can test your method against your test matrix.
     }
-   
+  
+    
+    // The feedPeople method
+        // Author: Gabriel Gonzales
+    // Purpose: Set aside wheat to feed the people
+    // Parameters: number of bushels to set aside for food
+    // Returns: Number of bushels remaining in the store
+    // Pre-conditions: Number of bushels must be positive and have enough wheat in the store  
+
+    public int feedPeople(CropData cropData){
+        int wheatForPeople = 0;
+//if wheatForPeople < 0, return -1
+        if(wheatForPeople < 0){
+            return -1;
+        }
+//if wheatInStore < wheatForPeople return -1
+    int wheatInStore = cropData.getWheatInStore();
+        if(wheatForPeople > wheatInStore){
+            return -1;
+        }
+//wheatInStore = wheatInStore - wheatForPeople
+    wheatInStore -= wheatForPeople;
+    cropData.setWheatInStore(wheatInStore);
+// wheat for people
+    cropData.setWheatForPeople(wheatForPeople);
+//return wheatInStore
+    return wheatInStore;
+    }
+    
+    
+  
+    
+    
+    
+    
+    
+    
+    
 // The buyLand method
 // Purpose: To buy land
 // Parameters: the price per acre of land, the number of acres to buy, bushels of wheat owned,
@@ -131,7 +168,7 @@ public class CropControl
                 //Population needed = Pn; Pn= A/10
                 populationNeeded = acresToPlant/10;
                //Population in the city = Pc (dataCrop) 
-                int population = cropData.getPopulation;
+                int population = cropData.population;
                  //If (Pc < Pn) [Error, there are not enough people, Enter a different value]. 
                 if (population < populationNeeded){
                     System.out.println("Error, there are not enough people, enter a different value");

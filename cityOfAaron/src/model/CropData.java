@@ -16,7 +16,7 @@ public class CropData implements Serializable {
     
     //Variables
     private int year;
-    private int population;
+    public int population;
     private int acresOwned;
     private int cropYield;
     private int wheatInStore;
@@ -25,9 +25,10 @@ public class CropData implements Serializable {
     private int harvest;
     private int wheatForFood;
     private int acresPlanted;
+    private int wheatForPeople;
     
         //Constructor
-    public CropData(int year, int population, int acresOwned, int cropYield, int wheatInStore, int numberWhoDied, int newPeople, int harvest, int wheatForFood, int acresPlanted) {
+    public CropData(int year, int population, int acresOwned, int cropYield, int wheatInStore, int numberWhoDied, int newPeople, int harvest, int wheatForFood, int acresPlanted, int wheatForPeople) {
         this.year = year;
         this.population = population;
         this.acresOwned = acresOwned;
@@ -37,7 +38,8 @@ public class CropData implements Serializable {
         this.newPeople = newPeople;
         this.harvest = harvest;
         this.wheatForFood = wheatForFood;
-        this.acresPlanted = acresPlanted;     
+        this.acresPlanted = acresPlanted; 
+        this.wheatForPeople = wheatForPeople;
 }
 
     public CropData() {
@@ -124,4 +126,12 @@ public class CropData implements Serializable {
     public void setAcresPlanted(int acresPlanted) {
         this.acresPlanted = acresPlanted;
     }
+    public int getWheatForPeople() {
+        return wheatForPeople;
+    }
+
+    public void setWheatForPeople(int wheatForPeople) {
+        this.wheatForPeople = wheatForPeople;
+    }
+    
 }
