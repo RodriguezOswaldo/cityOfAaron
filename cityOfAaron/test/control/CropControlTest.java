@@ -24,14 +24,13 @@ public class CropControlTest {
     @Test
     public void testSellLand() {
         System.out.println("sellLand");
-        int landPrice = 0;
-        int acresToSell = 0;
-        CropData cropData = null;
-        int expResult = 0;
+        int landPrice = 20;
+        int acresToSell = 10;
+        CropData cropData = new CropData();
+        int expResult = 2790;
         int result = CropControl.sellLand(landPrice, acresToSell, cropData);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     
     }
 
     /**
@@ -43,8 +42,7 @@ public class CropControlTest {
         int expResult = 0;
         int result = CropControl.calcLandCost();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+     
     }
 
     /**
@@ -56,8 +54,7 @@ public class CropControlTest {
         int expResult = 0;
         int result = CropControl.calcAcreCost();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        
     }
 
     /**
@@ -68,12 +65,28 @@ public class CropControlTest {
         System.out.println("buyLand");
         int acresPrice = 20;
         int acresToBuy = 10;
-        CropData cropData = null;
+        CropData cropData = new CropData();
+        cropData.setAcresOwned(2800);
         int expResult = 2970;
         int result = CropControl.buyLand(acresPrice, acresToBuy, cropData);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+       
+    }
+
+    /**
+     * Test of plantTheCrops method, of class CropControl.
+     */
+    @Test
+    public void testPlantTheCrops() {
+        System.out.println("plantTheCrops");
+        int acresToPlant = 35;
+        int populationNeeded = 4;
+        int wheatRequired = 18;
+        CropData cropData = new CropData();
+        int expResult = 35;
+        int result = CropControl.plantTheCrops(acresToPlant, populationNeeded, wheatRequired, cropData);
+        assertEquals(expResult, result);
+        
     }
     
 }
