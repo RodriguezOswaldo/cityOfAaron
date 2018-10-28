@@ -67,13 +67,13 @@ public class CropControlTest {
         int acresToBuy = 10;
         CropData cropData = new CropData();
         cropData.setAcresOwned(2800);
-        int expResult = 2970;
+        int expResult = 2790;
         int result = CropControl.buyLand(acresPrice, acresToBuy, cropData);
         assertEquals(expResult, result);
        
     }
 
-    /**
+   /**
      * Test of plantTheCrops method, of class CropControl.
      */
     @Test
@@ -83,10 +83,14 @@ public class CropControlTest {
         int populationNeeded = 4;
         int wheatRequired = 18;
         CropData cropData = new CropData();
+        cropData.setAcresOwned(50);
+        cropData.setPopulation(100);
+        cropData.setWheatInStore(60);
         int expResult = 35;
         int result = CropControl.plantTheCrops(acresToPlant, populationNeeded, wheatRequired, cropData);
         assertEquals(expResult, result);
         
     }
+
     
 }
