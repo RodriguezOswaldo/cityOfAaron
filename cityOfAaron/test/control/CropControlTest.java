@@ -34,30 +34,6 @@ public class CropControlTest {
     }
 
     /**
-     * Test of clacLandCost method, of class CropControl.
-     */
-    @Test
-    public void testCalcLandCost() {
-        System.out.println("clacLandCost");
-        int expResult = 0;
-        int result = CropControl.calcLandCost();
-        assertEquals(expResult, result);
-     
-    }
-
-    /**
-     * Test of calcAcreCost method, of class CropControl.
-     */
-    @Test
-    public void testCalcAcreCost() {
-        System.out.println("calcAcreCost");
-        int expResult = 0;
-        int result = CropControl.calcAcreCost();
-        assertEquals(expResult, result);
-        
-    }
-
-    /**
      * Test of buyLand method, of class CropControl.
      */
     @Test
@@ -71,7 +47,7 @@ public class CropControlTest {
         int result = CropControl.buyLand(acresPrice, acresToBuy, cropData);
         assertEquals(expResult, result);
        
-    }
+    }Let
 
    /**
      * Test of plantTheCrops method, of class CropControl.
