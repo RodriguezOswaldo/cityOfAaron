@@ -92,5 +92,20 @@ public class CropControlTest {
         
     }
 
+    /**
+     * Test of feedPeople method, of class CropControl.
+     */
+    @Test
+    public void testFeedPeople() {
+        System.out.println("feedPeople");
+        CropData cropData = null;
+        CropControl instance = new CropControl();
+        int expResult = 0;
+        int result = instance.feedPeople(cropData);
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
     
 }
