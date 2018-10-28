@@ -32,7 +32,6 @@ public class CropControlTest {
         assertEquals(expResult, result);
      
     }
-
     /**
      * Test of buyLand method, of class CropControl.
      */
@@ -47,7 +46,7 @@ public class CropControlTest {
         int result = CropControl.buyLand(acresPrice, acresToBuy, cropData);
         assertEquals(expResult, result);
        
-    }Let
+    }
 
    /**
      * Test of plantTheCrops method, of class CropControl.
