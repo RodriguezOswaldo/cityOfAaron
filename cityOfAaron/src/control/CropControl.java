@@ -84,13 +84,13 @@ public class CropControl
             int totalPrice = 17;
         // if acresToBuy < 0, return -1
             if(acresToBuy < 0) {
-               System.out.println("A negative value was input.");
+               return -1;
             }        
         // if acresToSell > acresOwned, return -1
             int wheat = cropData.getWheatInStore();
       
             if (wheat < totalPrice){
-                System.out.println("You don't have enough bushels");
+                return -1;
             }
         // acresOwned = acresOwned + acresToBuy
             int acresOwned = cropData.getAcresOwned();
@@ -98,10 +98,12 @@ public class CropControl
                 return acresOwned;
             } else {
             acresOwned += acresToBuy;
-                System.out.println(acresOwned);
+              cropData.setAcresOwned(acresOwned);
+                 //System.out.println(acresOwned);
             
              wheat -=(totalPrice * acresToBuy);
-                System.out.println(wheat);
+             cropData.setWheatInStore(wheat);
+                //System.out.println(wheat);
                 return acresOwned;
             }
     }
@@ -149,13 +151,13 @@ public class CropControl
         //If (A < 0) [Error, Enter the value again]
             if(acresToPlant < 0)
             {
-                System.out.println("Error, enter the value again"); 
+               return -1;
             }
         //If (L < A) [Error, Enter the value again]
             int owned = cropData.getAcresOwned();
             if(owned < acresToPlant)
             {
-                System.out.println("Error, enter the value again");  
+               return -1; 
             }
         //Population needed = Pn; Pn= A/10
             populationNeeded = acresToPlant/10;
@@ -164,7 +166,7 @@ public class CropControl
         //If (Pc < Pn) [Error, there are not enough people, Enter a different value]. 
             if (population < populationNeeded)
             {
-                System.out.println("Error, there are not enough people, enter a different value");
+                return -1;
             }
         //Wheat required = WR; WR = A/2
             wheatRequired = acresToPlant/2; 
@@ -172,13 +174,14 @@ public class CropControl
         //Ws  < WR   [There are not enough bushels of wheat in storage, enter the value again].  
             if(wheatInStore < wheatRequired)
             {
-                System.out.println("There are not enough bushels of wheat in storage, enter the value again");
+                return -1;
             }
         //Wheat in Store = Ws; Ws = Ws  - WR   
             wheatInStore -= wheatRequired;
         //Output: Display Acres Planted(A), and Wheat left in storage(WL)
-            System.out.println(wheatInStore);
-            System.out.println(acresToPlant);  
+            cropData.setWheatInStore(wheatInStore);
+            cropData.setAcresPlanted(acresToPlant);
+           
             return 0;            
      }
      
