@@ -56,7 +56,7 @@ public class CityOfAaron {
         System.out.println(TeamMember.SAM.getName()+ " - " + TeamMember.SAM.getTitle());
         
         //Gabriel's CropData class           
-        CropData cropdata = new CropData(2018, 2000, 1000, 300, 500, 3, 10, 600, 150, 100, 500);
+        CropData cropdata = new CropData(2018, 2000, 1000, 300, 500, 3, 10, 600, 150, 100, 500, 10);
         System.out.println("Year: " + cropdata.getYear());
         System.out.println("Population: " + cropdata.getPopulation());
         System.out.println("Acres Owned: " + cropdata.getAcresOwned());
@@ -68,6 +68,7 @@ public class CityOfAaron {
         System.out.println("Wheat for Food " + cropdata.getWheatForFood());
         System.out.println("Acres Planted: " + cropdata.getAcresPlanted()); 
         System.out.println("Wheat For People: " + cropdata.getWheatForPeople()); 
+        System.out.println("Offering: " + cropdata.getOfferingPercent());
     }
     
 }

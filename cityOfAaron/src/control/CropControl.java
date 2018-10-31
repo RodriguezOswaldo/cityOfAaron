@@ -186,12 +186,30 @@ public class CropControl
      }
      
     // The setOffering method
-    // Purpose: To set offering
-    // Parameters: 
-    // Returns: 
-    // Pre-conditions: 
+    // Purpose: to get the percentage of wheat to be paid as an offering
+    // Parameters: none
+    // Returns: returns percentage or -1
+    // Pre-conditions: value entered must >= 0 and <= 100
     // Author: Sam Wagner
      
+     public static int setOffering(int offeringPercent, CropData cropdata) 
+     {
+         //If percentage is less than zero return -1. [Error value must be postive]
+         if (offeringPercent < 0)
+         {
+             return -1;
+         }
+         
+         //If percentage is more than 100 return -1. [Error value must be < 100]
+         if (offeringPercent > 100)
+         {
+             return -1;
+         }
+         
+         //return the percentage to be used later in the payOfferings method
+         return offeringPercent;
+     }
+
 }
     
                 
