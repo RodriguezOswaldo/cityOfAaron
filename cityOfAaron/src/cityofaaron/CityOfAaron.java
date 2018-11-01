@@ -14,6 +14,7 @@ import model.Location;
 import model.ListItem;
 //Gabriel's Class!
 import model.CropData;
+import view.*;
 /**
  *
  * @author Own
@@ -69,6 +70,11 @@ public class CityOfAaron {
         System.out.println("Acres Planted: " + cropdata.getAcresPlanted()); 
         System.out.println("Wheat For People: " + cropdata.getWheatForPeople()); 
         System.out.println("Offering: " + cropdata.getOfferingPercent());
+        
+        //Main Menu View
+        //slide 53
+        MainMenuView mmv = new MainMenuView();
+        //mmv.displayMenuView();
     }
     
 }
