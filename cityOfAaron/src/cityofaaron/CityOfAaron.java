@@ -26,7 +26,7 @@ public class CityOfAaron {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+       
         //set player
         Player greatPlayer = new Player();
         greatPlayer.setName("Sam");
@@ -70,11 +70,13 @@ public class CityOfAaron {
         System.out.println("Acres Planted: " + cropdata.getAcresPlanted()); 
         System.out.println("Wheat For People: " + cropdata.getWheatForPeople()); 
         System.out.println("Offering: " + cropdata.getOfferingPercent());
-        
-        //Main Menu View
-        //slide 53
-        MainMenuView mmv = new MainMenuView();
+  
+        //we have to complete this part
+        //MainMenuView mmv = new MainMenuView();
         //mmv.displayMenuView();
+    
+        
     }
     
+
 }

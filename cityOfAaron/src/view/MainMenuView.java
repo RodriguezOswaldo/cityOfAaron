@@ -13,53 +13,53 @@ package view;
 
 import java.util.Scanner;
 
-public class MainMenuView 
+public class MainMenuView
 {
     Scanner keyboard = new Scanner(System.in);
     private String theMenu;
     private int max;
     
-    // The MainMenuView constructor
-    // Purpose: Initialize the menu data
-    // Parameters: none
-    // Returns: none
-    // ===================================
-    //slide 53
-    MainMenuView mmv = new MainMenuView();
-
-    // The displayMenuView method
-    // Purpose: displays the menu, gets the user's input, and does the 
-    //               selected action
-    // Parameters: none
-    // Returns: none
-    // =========================================================    
-    public void displayMenuView(String theMenu, int max)
-    {
-        int menuOption;
-        theMenu = "\n" +
-               "**********************************\n" +
-               "* CITY OF AARON: MAIN GAME MENU  *\n" +
-               "**********************************\n" +
-               " 1 - Start new game\n" +
-               " 2 - Get and start a saved game\n" +
-               " 3 - Get help on playing the game\n" +
-               " 4 - Save game\n" +
-               " 5 - Quit\n";
-         max = 5;
-        do  
-        {
-            
-             // Display the menu
-             System.out.println(theMenu);
-
-             // Prompt the user and get the user’s input
-             menuOption = getMenuOption();
-
-             // Perform the desired action
-             doAction(menuOption);
-
-        } while (menuOption != max);
+        //  Constructor
+     public MainMenuView(String theMenu, int max) {
+        this.theMenu = theMenu;
+        this.max = max;
     }
+    
+    public void displayMenuView() 
+    {
+        
+         /* the displayMenuView method
+    purpose: display the menu, get user input and perform selected action
+    parameters: none
+    returns: none
+    */
+    
+    theMenu = "\n" +
+            "****************************\n" +
+            "  CITY OF AARON: Main Menu  " +
+            "****************************\n" +
+            " 1 - Start an new game\n" +
+            " 2 - Continue a saved game\n" +
+            " 3 - How to play\n" +
+            " 4 - Save game\n" +
+            " 5 - Quit\n";
+    max = 5;   
+        int menuOption;
+        do
+        {
+        //  1 Display the menu
+        System.out.println(theMenu);
+        
+        //  2 prompt user and get user input
+        menuOption = getMenuOption();
+        
+        //  3 perform desired action
+        doAction(menuOption);
+        
+        //  4 determine the next display
+        } while (menuOption !=max);
+        
+}
         
     // The getMenuOption method
     // Purpose: gets the user's input
@@ -69,9 +69,8 @@ public class MainMenuView
     public int getMenuOption()
     {
            // declare a variable to hold user’s input
-            int userInput = 0;
-            final int MAX = 5;
-            Scanner keyboard = new Scanner(System.in );
+            int userInput;
+
 
             // begin loop
             do
@@ -81,7 +80,7 @@ public class MainMenuView
                      // if it is not a valid value, output an error message
                     // loop back to the top of the loop if input was not valid
             // end loop
-            } while (userInput < 1 || userInput > MAX);
+            } while (userInput < 1 || userInput > max);
             return userInput;
     }
     
