@@ -10,8 +10,9 @@ package view;
  *
  * @author team
  */
-
 import java.util.Scanner;
+import cityofaaron.CityOfAaron;
+import control.GameControl;
 
 public class MainMenuView
 {
@@ -38,7 +39,7 @@ public class MainMenuView
             "****************************\n" +
             "  CITY OF AARON: Main Menu \n" +
             "****************************\n" +
-            " 1 - Start an new game\n" +
+            " 1 - Start a new game\n" +
             " 2 - Continue a saved game\n" +
             " 3 - How to play\n" +
             " 4 - Save game\n" +
@@ -116,7 +117,24 @@ public class MainMenuView
     // ===================================     
     public void startNewGame()
     {
-        System.out.println("\nStart new game option selected.");
+        // Display the Banner Page.
+    
+        System.out.println("\nWelcome to the city of Aaron.");
+        
+        // Prompt for and get the user’s name.
+        String name;
+        System.out.println("\nPlease type in your first name: ");
+        name = keyboard.next();
+
+    // Call the createNewGame() method in the GameControl class
+    
+        GameControl.createNewGame();
+
+    // Display a welcome message
+        System.out.println("Welcome " + name + " have fun!!!");
+
+    // Display the Game menu 
+        //Go Back!!!!!!!
     }
     
     // The startSavedGame method
