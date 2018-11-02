@@ -42,6 +42,7 @@ public class CropData implements Serializable {
         this.acresPlanted = acresPlanted; 
         this.wheatForPeople = wheatForPeople;
         this.offeringPercent = offeringPercent;
+        
 }
 
     public CropData() {
