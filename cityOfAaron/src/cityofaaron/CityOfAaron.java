@@ -72,8 +72,8 @@ public class CityOfAaron {
         System.out.println("Offering: " + cropdata.getOfferingPercent());
   
         //we have to complete this part
-        //MainMenuView mmv = new MainMenuView();
-        //mmv.displayMenuView();
+        MainMenuView mmv = new MainMenuView();
+        mmv.displayMenuView();
     
         
     }
