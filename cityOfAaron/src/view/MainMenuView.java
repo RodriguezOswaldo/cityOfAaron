@@ -20,7 +20,7 @@ public class MainMenuView
     private int max;
     
         //  Constructor
-     public MainMenuView(String theMenu, int max) {
+     public MainMenuView() {
         this.theMenu = theMenu;
         this.max = max;
     }
@@ -36,7 +36,7 @@ public class MainMenuView
     
     theMenu = "\n" +
             "****************************\n" +
-            "  CITY OF AARON: Main Menu  " +
+            "  CITY OF AARON: Main Menu \n" +
             "****************************\n" +
             " 1 - Start an new game\n" +
             " 2 - Continue a saved game\n" +
