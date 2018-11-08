@@ -98,6 +98,9 @@ public class MainMenuView
         switch(option)
         {
             case 1: // create and start a new game
+                // display the Game menu
+                GameMenuView gmv = new GameMenuView();
+                gmv.displayGameMenuView();
                 startNewGame();
                 break;
             case 2: // get and start a saved game
