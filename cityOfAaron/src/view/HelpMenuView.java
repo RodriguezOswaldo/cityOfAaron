@@ -22,8 +22,8 @@ public class HelpMenuView {
         this.theHelpMenu = theHelpMenu;
         //this.theMenu = theMenu;
         this.max = max;
-        
-     public void displayHelpMenu() 
+     }
+     public void displayHelpMenuView() 
     {
         
 		/*the displayHelpMenu method
@@ -35,7 +35,7 @@ public class HelpMenuView {
 	
     theHelpMenu =   "\n" +
                     "****************************\n" +
-                    "  CITY OF AARON: Main Menu \n" +
+                    "  CITY OF AARON: Help Menu \n" +
                     "****************************\n" +
                     " 1 - What are the goals of the game?\n" +
                     " 2 - How do I view the map?\n" +
