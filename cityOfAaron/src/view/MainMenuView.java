@@ -110,6 +110,7 @@ public class MainMenuView
                 break;
             case 5:
                 System.out.println("Thanks for playing ... goodbye.");
+            default: // Fix Invalid Value.  
         }
     }
     // The startNewGame method
