@@ -13,6 +13,7 @@ package view;
 import java.util.Scanner;
 import cityofaaron.CityOfAaron;
 import control.GameControl;
+import view.*;
 
 public class MainMenuView
 {
@@ -103,7 +104,9 @@ public class MainMenuView
                 startSavedGame();
                 break;
             case 3: // get help menu
-                displayHelpMenuView();
+                //runs the help menu
+                HelpMenuView hmv = new HelpMenuView();
+                hmv.displayHelpMenuView();
                 break;
             case 4: // save game
                 displaySaveGameView();
