@@ -95,8 +95,9 @@ public class GameMenuView {
                viewMap();
                break;
             case 2://View the list
-               viewList();
-               break;
+                ListMenuView lmv = new ListMenuView();
+                lmv.displayListMenuView();
+                break;
             case 3://Move to a new location
                moveToNewLocation();
             case 4://Manage your crops
