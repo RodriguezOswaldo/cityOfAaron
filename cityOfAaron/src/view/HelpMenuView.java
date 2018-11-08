@@ -112,7 +112,9 @@ public class HelpMenuView {
     public void viewGoals(){
         //displat the viewGoals
         
-        System.out.println("\nGoals of the Game");
+        System.out.println("Goals of the Game:\n" + " You have been appointed as a ruler in the City of Aaron,\n"
+                + " your role is to manage the resources possesed by them in order to protect the city and their people,\n"
+                + " and to make sure that they have all the resources that they need in a 10 years period of time.\n");
     }
     
     // The viewMapHelp method
@@ -122,7 +124,7 @@ public class HelpMenuView {
     // ===================================   
     
     public void viewMapHelp(){
-        System.out.println("\nGo to the GameMenu, and pick the ViewMap option.");
+        System.out.println("Go to the Game Menu, and choose the View Map option (1).\n");
     }
     
     // The viewMoveHelp method
@@ -132,7 +134,7 @@ public class HelpMenuView {
     // ===================================  
     
     public void viewMoveHelp(){
-        System.out.println("");
+        System.out.println("Go to the Game Menu, and choose the Move to a New Location option (3) And give there the new coordinates.\n");
     }
     
     // The viewListHelp method
@@ -142,6 +144,6 @@ public class HelpMenuView {
     // ===================================  
     
     public void viewListHelp(){
-        System.out.println("\nGo the game menu, and choose the Second option ViewPrint list");
+        System.out.println("Go the game menu, and choose the View List option (2)\n");
     }
 }
