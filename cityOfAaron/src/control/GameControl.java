@@ -1,7 +1,8 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ *The GameControl class - part of the View layer.
+ * class contains some important information.   
+ * Author: Sam Wagner, Gabriel Gonzales, Oswaldo Rodríguez 
+ * Date last modified: October 2018
  */
 package control;
 import model.*;
