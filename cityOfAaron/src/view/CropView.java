@@ -91,7 +91,7 @@ public class CropView {
         toPlant = keyboard.nextInt();
        
       
-        //Call the buyLand() method in the control later to plant the crops
+        //Call the buyLand() method in the control later to plant the crops //Fix this comments 
         CropControl.plantTheCrops(toPlant, cropData);
         
         //Output how many acres were planted
@@ -104,10 +104,10 @@ public class CropView {
         //Created
        public static void feedPeopleView(){
         
-        //Get the cost of Land for this round
+        //Get the cost of Land for this round //fix this comments 
         int population = cropData.getPopulation();
         
-        //Prompt the user to enter the number of acres to buy
+        //Prompt the user to enter the number of acres to buy //Fix this Comments 
         System.out.format("Land is selling for %d bushles per acre.%n", population);
         System.out.println("\nHow many bushels of grain do you want to set aside to feed the people?”");
         
@@ -117,10 +117,11 @@ public class CropView {
         
         cropData.setWheatForPeople(bushelsGrain);
    
-        //Call the buyLand() method in the control later to buy the land
+        //Call the buyLand() method in the control later to buy the land //Fix This Comments 
         CropControl.feedPeople(cropData, bushelsGrain);
         
-        //Output how many acres were planted
+        //Output how many acres were planted //Fix the message down there, and make sure that this displays what it is supposed to.
+        //See City of Aaron requirements to make sure 
         System.out.format("You have planted %d acres of land, ",cropData.getWheatInStore());
     }
     //The runCropView method()
