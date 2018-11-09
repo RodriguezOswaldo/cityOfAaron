@@ -38,7 +38,7 @@ public class CityOfAaron {
     public static void setGame(Game game){
         theGame = game;
     }
-    public Game getGame(){
+    public static Game getGame(){
         return theGame;
     }
     

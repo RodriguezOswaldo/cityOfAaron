@@ -25,7 +25,7 @@ public class CropControl
     // random number generator
     private static Random random = new Random();
     
-    //calcLandCosta() method
+    //calcLandCost() method
     //Purpose: Calculate a random land cost between 17 and 26 bushels/acre
     //Parameters: none
     //Returns: the land cost
@@ -115,9 +115,9 @@ public class CropControl
     // Returns: Number of bushels remaining in the store
     // Pre-conditions: Number of bushels must be positive and have enough wheat in the store  
     
-    public int feedPeople(CropData cropData)
+    public static int feedPeople(CropData cropData, int wheatForPeople)
     {    
-            int wheatForPeople = 0;
+           
         //if wheatForPeople < 0, return -1
             if(wheatForPeople < 0){
                  return -1;
@@ -146,7 +146,7 @@ public class CropControl
     // wheat in store must be greater than required (wheatRequired = acresToPlant/2)
     // Oswaldo Rodriguez
 
-     public static int plantTheCrops(int acresToPlant, int populationNeeded, int wheatRequired,  CropData cropData) 
+     public static int plantTheCrops(int acresToPlant,  CropData cropData) 
      {
         //If (A < 0) [Error, Enter the value again]
             if(acresToPlant < 0)
@@ -160,7 +160,7 @@ public class CropControl
                return -1; 
             }
         //Population needed = Pn; Pn= A/10
-            populationNeeded = acresToPlant/10;
+            int populationNeeded = acresToPlant/10;
         //Population in the city = Pc (dataCrop) 
             int population = cropData.population;
         //If (Pc < Pn) [Error, there are not enough people, Enter a different value]. 
@@ -169,7 +169,7 @@ public class CropControl
                 return -1;
             }
         //Wheat required = WR; WR = A/2
-            wheatRequired = acresToPlant/2; 
+            int wheatRequired = acresToPlant/2; 
             int wheatInStore = cropData.getWheatInStore();
         //Ws  < WR   [There are not enough bushels of wheat in storage, enter the value again].  
             if(wheatInStore < wheatRequired)
