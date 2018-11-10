@@ -76,7 +76,7 @@ public class CropView {
         //Purpose: Interface with the user input for plant crops
         //Parameters: none
         //Returns: none
-        //Created 
+        //Created by Sam Wagner
       public static void plantCropsView(){
         
         //Get the cost of Land for this round
@@ -101,7 +101,7 @@ public class CropView {
         //Purpose: Interface with the user input for setting aside wheat to feed the people 
         //Parameters: none
         //Returns: none
-        //Created
+        //Created by Gabriel Gonzales
        public static void feedPeopleView(){
         
         //Get the cost of Land for this round //fix this comments 
