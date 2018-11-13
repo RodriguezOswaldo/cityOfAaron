@@ -95,8 +95,7 @@ public class GameMenuView {
                viewMap();
                break;
             case 2://View the list
-                ListMenuView lmv = new ListMenuView();
-                lmv.displayListMenuView();
+                viewList();
                 break;
             case 3://Move to a new location
                moveToNewLocation();
@@ -130,6 +129,8 @@ public class GameMenuView {
     public void viewList()
     {
         System.out.println("\nHere's your list.");
+        ListMenuView lmv = new ListMenuView();
+        lmv.displayListMenuView();
     }
     
     // The moveToNewLocation method

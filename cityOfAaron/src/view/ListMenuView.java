@@ -128,4 +128,8 @@ public void doAction(int option){
     System.out.println("\n *Displays a List of the Team");
   }
 
+    void displayMenu() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
