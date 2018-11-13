@@ -71,37 +71,36 @@ public class CropView {
         System.out.format("You now own %d acres of land, ", cropData.getAcresOwned());
     }
      
-     
-        //The plantCropsView method
-        //Purpose: Interface with the user input for plant crops
-        //Parameters: none
-        //Returns: none
-        //Created by Sam Wagner
+    //The plantCropsView method
+    //Purpose: Interface with the user input for plant crops
+    //Parameters: none
+    //Returns: none
+    //Created by Sam Wagner
       public static void plantCropsView(){
         
         //Get the cost of Land for this round
         int population = CropControl.calcLandCost();
         
         //Prompt the user to enter the number of acres to plant
-        System.out.format("Land is selling for %d bushles per acre.%n", population);//Fix this comments
+        System.out.format("Land is selling for %d bushles per acre.%n", population);
         System.out.println("\nHow many acres of land do you want to plant?”");
         
         //Get the user's input and save it.
         int toPlant;
         toPlant = keyboard.nextInt();
-       
       
-        //Call the buyLand() method in the control later to plant the crops //Fix this comments 
+        //Call the plantTheCrops() method in the control layer to plant the crops 
         CropControl.plantTheCrops(toPlant, cropData);
         
         //Output how many acres were planted
         System.out.format("You have planted %d acres of land, ", cropData.getAcresPlanted());
     }
-        //The feedPeopleView method
-        //Purpose: Interface with the user input for setting aside wheat to feed the people 
-        //Parameters: none
-        //Returns: none
-        //Created by Gabriel Gonzales
+      
+    //The feedPeopleView method
+    //Purpose: Interface with the user input for setting aside wheat to feed the people 
+    //Parameters: none
+    //Returns: none
+    //Created by Gabriel Gonzales
        public static void feedPeopleView(){
         
         //Get the cost of Land for this round //fix this comments 
@@ -140,16 +139,13 @@ public class CropView {
         feedPeopleView();
         //displayCropsReportView()
         displayCropsReportView();
-        
-        
-        
     }
     
-         // The endOfYearReportView method
+    // The endOfYearReportView method
     // Purpose: display the city stats
     // Parameters: none
     // Returns: none
-//Author: Gabriel Gonzales
+    //Author: Gabriel Gonzales
      
         public static void displayCropsReportView() {
            
