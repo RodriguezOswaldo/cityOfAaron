@@ -11,17 +11,16 @@ import static org.junit.Assert.*;
 
 /**
  *
- * @author Oswaldo Rodriguez, Sam Wagner, Gabriel Gonzalez
+ * @author Oswaldo Rodriguez, Sam Wagner, Gabriel Gonzales
  */
 public class CropControlTest {
-    
     public CropControlTest() {
+    
     }
 
-    /**
-     * Test of sellLand method, of class CropControl.
-     */
-    @Test
+    //* Test of sellLand method, of class CropControl.
+
+     @Test
     public void testSellLand() {
         System.out.println("sellLand");
         int landPrice = 20;
@@ -32,9 +31,8 @@ public class CropControlTest {
         assertEquals(expResult, result);
      
     }
-    /**
-     * Test of buyLand method, of class CropControl.
-     */
+
+     //* Test of buyLand method, of class CropControl.
     @Test
     public void testBuyLand() {
         System.out.println("buyLand");
@@ -48,9 +46,7 @@ public class CropControlTest {
        
     }
 
-   /**
-     * Test of plantTheCrops method, of class CropControl.
-     */
+     //* Test of plantTheCrops method, of class CropControl.
     @Test
     public void testPlantTheCrops() {
         System.out.println("plantTheCrops");
@@ -62,25 +58,49 @@ public class CropControlTest {
         cropData.setPopulation(100);
         cropData.setWheatInStore(60);
         int expResult = 35;
-        int result = CropControl.plantTheCrops(acresToPlant, populationNeeded, wheatRequired, cropData);
+        int result = CropControl.plantTheCrops(acresToPlant, cropData);
         assertEquals(expResult, result);
         
     }
-
     /**
      * Test of feedPeople method, of class CropControl.
      */
-    @Test
+    @Test //Valid
     public void testFeedPeople() {
         System.out.println("feedPeople");
-        CropData cropData = null;
+        CropData cropData = new CropData();
         CropControl instance = new CropControl();
-        int expResult = 0;
-        int result = instance.feedPeople(cropData);
+        int wheatForPeople = 4;
+        cropData.setWheatInStore(10);
+        int expResult = 6;
+        int result = instance.feedPeople(cropData, wheatForPeople);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+
+    }
+        @Test //Invalid
+    public void testFeedPeople1() {
+        System.out.println("feedPeople");
+        CropData cropData = new CropData();
+        CropControl instance = new CropControl();
+        int wheatForPeople = -1;
+        cropData.setWheatInStore(10);
+        int expResult = -1;
+        int result = instance.feedPeople(cropData, wheatForPeople);
+        assertEquals(expResult, result);
+
     }
 
+           @Test //Boundary
+    public void testFeedPeople3() {
+        System.out.println("feedPeople");
+        CropData cropData = new CropData();
+        CropControl instance = new CropControl();
+        int wheatForPeople = 10;
+        cropData.setWheatInStore(10);
+        int expResult = 0;
+        int result = instance.feedPeople(cropData, wheatForPeople);
+        assertEquals(expResult, result);
+
+    }
     
 }
