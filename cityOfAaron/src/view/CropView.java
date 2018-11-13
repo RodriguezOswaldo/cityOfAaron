@@ -138,6 +138,47 @@ public class CropView {
         plantCropsView();
         //call the feedPeopleView() method
         feedPeopleView();
+        //displayCropsReportView()
+        displayCropsReportView();
+        
+        
         
     }
+    
+         // The endOfYearReportView method
+    // Purpose: display the city stats
+    // Parameters: none
+    // Returns: none
+//Author: Gabriel Gonzales
+     
+        public static void displayCropsReportView() {
+           
+        int yearNumber = cropData.getYear();
+        int newPeople = cropData.getNewPeople();
+        int population = cropData.getPopulation();
+        int acresOwned = cropData.getAcresOwned();
+        int cropYield = cropData.getCropYield();
+        int wheatInStore = cropData.getWheatInStore();
+                
+        System.out.format("Year:" + yearNumber + " %n");
+        System.out.format("Number of people in the city: " + newPeople + " %n");
+        System.out.format("Number of current population: " + population + " %n");
+        System.out.format("Number of land owned by the city: " + acresOwned + " %n");
+        System.out.format("Number of bushels per acre harvested this year: " + cropYield + " %n");
+        System.out.format("Number of bushels in store: " + wheatInStore + " %n");
+}
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }
