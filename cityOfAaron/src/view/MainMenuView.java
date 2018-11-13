@@ -99,8 +99,6 @@ public class MainMenuView
         {
             case 1: // create and start a new game
                 // display the Game menu
-                GameMenuView gmv = new GameMenuView();
-                gmv.displayGameMenuView();
                 startNewGame();
                 break;
             case 2: // get and start a saved game
@@ -137,16 +135,14 @@ public class MainMenuView
 
     // Call the createNewGame() method in the GameControl class
     
-        GameControl.createNewGame();
+        GameControl.createNewGame(name);
 
     // Display a welcome message
         System.out.println("Welcome " + name + " have fun!!!");
 
     // Display the Game menu 
-        //Go Back!!!!!!!
-        //I came back here, Oswaldo.
-        //GameMenuView gmv = new GameMenuView();
-        //gmv.displayMenuView();
+                GameMenuView gmv = new GameMenuView();
+                gmv.displayMenuView();
     }
     
     // The startSavedGame method

@@ -22,7 +22,7 @@ public class GameMenuView {
         //this.theMenu = theMenu;
         this.max = max;
      }
-    public void displayGameMenuView() 
+    public void displayMenuView() 
     {
         
    /*displayGameMenu method
@@ -101,6 +101,7 @@ public class GameMenuView {
                moveToNewLocation();
             case 4://Manage your crops
                manageCrops();
+               CropView.runCropView();
                break;
             case 5:
                System.out.println(theGameMenu);

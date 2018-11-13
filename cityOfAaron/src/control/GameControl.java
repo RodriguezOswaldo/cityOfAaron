@@ -46,10 +46,6 @@ public class GameControl {
         CityOfAaron.setGame(game);
         }
 
-    public static void createNewGame() {
-        System.out.println("Thank you for your name!!!\n");
-                
-    }
 }
 
 
