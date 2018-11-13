@@ -7,7 +7,7 @@ package view;
 import java.util.Scanner;
 /**
  *
- * @author swagner
+ * @author Sam Wagner
  */
 public class GameMenuView {
     
@@ -117,7 +117,6 @@ public class GameMenuView {
     
     public void viewMap(){
         //display the Map
-        
         System.out.println("\nYour Map");
     }
     
@@ -135,26 +134,24 @@ public class GameMenuView {
     }
     
     // The moveToNewLocation method
-    // Purpose: display the move of location options.
+    // Purpose: display the move to new location options.
     // Parameters: none
     // Returns: none
     // ===================================  
     
     public void moveToNewLocation()
     {
-        System.out.println("\n");
+        System.out.println("Would you like to move to a new location?\n");
     }
     
-    // The moveToNewLocation method
-    // Purpose: display the move of location options.
+    // The manageCrops method
+    // Purpose: displays the optioon to manage your crops
     // Parameters: none
     // Returns: none
     // ===================================  
     
     public void manageCrops()
     {
-        System.out.println("\n");
+        CropView.runCropView();
     }
-    
-    
 }
