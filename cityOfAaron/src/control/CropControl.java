@@ -192,8 +192,11 @@ public class CropControl
     // Pre-conditions: value entered must >= 0 and <= 100
     // Author: Sam Wagner
      
-     public static int setOffering(int offeringPercent, CropData cropdata) 
+     public static int setOffering(int offeringPercet, CropData cropdata) 
      {
+         CropData cropData = new CropData();
+         int offeringPercent = cropData.getOfferingPercent();
+         
          //If percentage is less than zero return -1. [Error value must be postive]
          if (offeringPercent < 0)
          {
@@ -206,8 +209,11 @@ public class CropControl
              return -1;
          }
          
-         //return the percentage to be used later in the payOfferings method
+         cropData.setOfferingPercent(offeringPercent);
+         
+          //return the percentage to be used later in the payOfferings method
          return offeringPercent;
+         
      }
 
 }

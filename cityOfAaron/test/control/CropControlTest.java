@@ -102,5 +102,44 @@ public class CropControlTest {
         assertEquals(expResult, result);
 
     }
+
+    /**
+     * Test of calcLandCost method, of class CropControl.
+     */
+    @Test
+    public void testCalcLandCost() {
+        System.out.println("calcLandCost");
+        int expResult = 0;
+        int result = CropControl.calcLandCost();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of calcAcreCost method, of class CropControl.
+     */
+    @Test
+    public void testCalcAcreCost() {
+        System.out.println("calcAcreCost");
+        int expResult = 0;
+        int result = CropControl.calcAcreCost();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setOffering method, of class CropControl.
+     */
+    @Test
+    public void testSetOffering() {
+        System.out.println("setOffering");
+        int offeringPercent = 0;
+        CropData cropdata = null;
+        int expResult = 0;
+        int result = CropControl.setOffering(offeringPercent, cropdata);
+        assertEquals(expResult, result);
+    }
     
 }
