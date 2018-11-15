@@ -31,7 +31,7 @@ public class CityOfAaron {
           
         // runs the main menu
         MainMenuView mmv = new MainMenuView();
-        mmv.displayMenuView();
+        mmv.displayMenu();
         
     }
     
