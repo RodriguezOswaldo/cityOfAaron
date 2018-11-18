@@ -85,10 +85,10 @@ public class MainMenuView extends MenuView
 
         // Display a welcome message
         System.out.println("Welcome " + name + " have fun!!!");
-
-        // Display the Game menu 
+        
+        //Call the GameMenuView
         GameMenuView gmv = new GameMenuView();
-        gmv.displayMenuView();
+        gmv.displayMenu();
     }
     
     // The startSavedGame method

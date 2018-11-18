@@ -45,7 +45,7 @@ public abstract class MenuView implements ViewInterface{
         } while (menuOption != max);
   
     }
-        // The getUserInput method
+    // The getUserInput method
     // Purpose: gets user input, makes sure it is within range
     // Parameters: none
     // Returns: the user input, between 1 and maxValue 
