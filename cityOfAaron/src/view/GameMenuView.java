@@ -81,9 +81,8 @@ public class GameMenuView extends MenuView{
     
     public void viewList()
     {
-        System.out.println("\nHere's your list.");
         ListMenuView lmv = new ListMenuView();
-        lmv.displayListMenuView();
+        lmv.displayMenu();
     }
     
     // The moveToNewLocation method

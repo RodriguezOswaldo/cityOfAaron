@@ -11,28 +11,16 @@ import java.util.Scanner;
  *
  * @author Gabriel Memories
  */
-public class ListMenuView {
+public class ListMenuView extends MenuView{
     
-    Scanner keyboard = new Scanner(System.in);
-   // private String theMenu;
-    private String theMenu;
-    private int max;
-    
-        //  Constructor
-     public ListMenuView() {
-        this.theMenu = theMenu;
-        //this.theMenu = theMenu;
-        this.max = max;
-     }
-     public void displayListMenuView() 
-    {
-    
-//Display the menu
+
+public ListMenuView(){
+    //Display the menu
     //Prompt user and get user's input
     //Perform the desired action
     //determine and display the next view
     
-        theMenu = "\n"
+        super("\n"
                 + "**********************************\n"
                 + "* CITY OF AARON: LIST MENU   *\n"
                 + "**********************************\n"
@@ -40,47 +28,15 @@ public class ListMenuView {
                 + " 2 - List or View the tools in the storehouse\n"
                 + " 3 - List or View the provisions in the storehouse\n"
                 + " 4 - List or View the authors of this game\n"
-                + " 5 - Return to the Main Menu\n";
-        max = 5;         
-                    int listMenuOption;
-                    do 
-                    {
-                    //1 display  the menu
-                    System.out.println(theMenu);
-                    //2 prompt user and get user input
-                    listMenuOption = getListMenuOption();
-                    //3 perform desired action
-                    doAction(listMenuOption);
-                    //4 determine the next display
-                    } while(listMenuOption != max);
-                }
-    // The getHelpMenuOption method
-    // Purpose: gets the user's input
-    // Parameters: none
-    // Returns: integer - the option selected
-    // ===================================       
-    public int getListMenuOption()
-    {        
-        //declare a variable to hold user's input
-        int userInput;
-        //begin loop
-        do
-        {
-            // get user input from the keyboard
-            userInput = keyboard.nextInt();
-            //if it is not a valid value, output an error message
-            //loop back to the top of the loop if input was not valid 
-            //end loop
-        }while (userInput < 1 || userInput > max);
-        return userInput;
+                + " 5 - Return to the Main Menu\n"
+                ,5);        
     }
-   
     // The doAction method
     // Purpose: performs the selected action
     // Parameters: none
     // Returns: none
     // ==================================
-public void doAction(int option){
+@Override public void doAction(int option){
     switch (option) {
       case 1: // display Animals List
         displayAnimalsList();
@@ -91,14 +47,14 @@ public void doAction(int option){
       case 3: // display Provisions list
         displayProvisionsList();
         break;
-      case 4: // display the Team list
+      case 4: // display the Authors list
         displayTeamList();
         break;
-       case 5: // back to main menu
-       break;
+       case 6: // back to main menu
+         break;
         
     }
-  }
+}
    // The displayAnimalsList method
     // Purpose: Displays a list of Animals
     // Parameters: none
@@ -127,9 +83,5 @@ public void doAction(int option){
  public void displayTeamList(){
     System.out.println("\n *Displays a List of the Team");
   }
-
-    void displayMenu() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+   
 }
