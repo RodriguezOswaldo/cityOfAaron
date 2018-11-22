@@ -6,6 +6,9 @@
 package view;
 
 import java.util.Scanner;
+import java.util.ArrayList;
+import control.*;
+import model.ListItem;
 
 /**
  *
@@ -60,8 +63,20 @@ public ListMenuView(){
     // Parameters: none
     // Returns: none
  public void displayAnimalsList(){
-    System.out.println("\n *View Animals List Selected*");
+   // System.out.println("\n *View Animals List Selected*");
+   
+   //Creating the game object.
+   GameControl gameControl = new GameControl();
+   
+   //Creating the New ArrayList
+   ArrayList<ListItem> listItem = new ArrayList<ListItem>();
+   ArrayList<ListItem> animalsList = gameControl.createAnimalsList();
+   
+   //Displaying the list .
+   for (int i = 0; i< animalsList.size(); i++){
+   System.out.println(animalsList.get(i).getName() + " " + animalsList.get(i).getNumber());
   }
+ }
     // The displayToolsList method
     // Purpose: Displays a list of Tools
     // Parameters: none
@@ -83,5 +98,8 @@ public ListMenuView(){
  public void displayTeamList(){
     System.out.println("\n *View a List of the Team");
   }
-   
+ 
+ public void displayCityList(){
+    System.out.println("\n *View a List of the Team");
+  }
 }
