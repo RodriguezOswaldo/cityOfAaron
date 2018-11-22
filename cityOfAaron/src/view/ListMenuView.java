@@ -60,28 +60,28 @@ public ListMenuView(){
     // Parameters: none
     // Returns: none
  public void displayAnimalsList(){
-    System.out.println("\n *Displays Animals List*");
+    System.out.println("\n *View Animals List Selected*");
   }
     // The displayToolsList method
     // Purpose: Displays a list of Tools
     // Parameters: none
     // Returns: none
  public void displayToolsList(){
-    System.out.println("\n *Displays a List of Tools*");
+    System.out.println("\n *View a List of Tools*");
   }
    // The displayProvisionsList method
     // Purpose: Displays a list of Provision
     // Parameters: none
     // Returns: none
  public void displayProvisionsList(){
-    System.out.println("\n *Displays Provision List*.");
+    System.out.println("\n *View Provision List*.");
   }
      // The displayTeamList method
     // Purpose: Displays a list of the Team
     // Parameters: none
     // Returns: none
  public void displayTeamList(){
-    System.out.println("\n *Displays a List of the Team");
+    System.out.println("\n *View a List of the Team");
   }
    
 }
