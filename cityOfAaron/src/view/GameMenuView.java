@@ -4,6 +4,7 @@
  * Nov 2018
  */
 package view;
+import model.*;
 import java.util.Scanner;
 /**
  *
@@ -69,7 +70,7 @@ public class GameMenuView extends MenuView{
     
     public void viewMap(){
         //display the Map
-        System.out.println("\nYour Map");
+        System.out.println("\nHere's your map.");
     }
     
     // The viewList method
