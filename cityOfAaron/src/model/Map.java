@@ -8,7 +8,7 @@ package model;
 
 /**
  *
- * @author swagner
+ * @author own
  */
 public class Map {
      private int rowCount;                 // stores the number of rows 

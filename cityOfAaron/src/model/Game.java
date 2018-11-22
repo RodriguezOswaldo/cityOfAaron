@@ -15,6 +15,7 @@ public class Game implements Serializable {
     
     private Player thePlayer;
     private CropData cropData;
+    private Map theMap;
     
     public Game(){}
     
@@ -32,5 +33,13 @@ public class Game implements Serializable {
     
     public void setCropData(CropData cropData){
         this.cropData = cropData;
+    }
+    
+    public Map getMap(){
+        return theMap;
+    } 
+    
+    public void setMap(Map _theMap){
+        this.theMap = _theMap;
     }
 }
