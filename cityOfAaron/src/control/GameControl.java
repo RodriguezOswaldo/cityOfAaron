@@ -161,7 +161,7 @@ public class GameControl {
 
             theGame.setMap(theMap);
         }
-        //Oswaldo Create animals method 
+        //Oswaldo Created animals method 
         public static ArrayList<ListItem> createAnimalsList(){
             //Creating the Game object
             Game theGame = new Game();

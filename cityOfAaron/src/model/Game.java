@@ -5,6 +5,7 @@
  *Team Members: Sam Wagner, Gabriel Gonzales, Oswaldo Rodríguez
  */
 package model;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,6 +17,7 @@ public class Game implements Serializable {
     private Player thePlayer;
     private CropData cropData;
     private Map theMap;
+    private ArrayList<ListItem> animals;
     
     public Game(){}
     
@@ -41,5 +43,13 @@ public class Game implements Serializable {
     
     public void setMap(Map _theMap){
         this.theMap = _theMap;
+    }
+    //Animals Getter and Setter by Oswaldo...
+    public  ArrayList<ListItem> getAnimals(){
+        return animals;
+    } 
+    
+    public void setAnimals(ArrayList<ListItem> _animals){
+        this.animals = _animals;
     }
 }

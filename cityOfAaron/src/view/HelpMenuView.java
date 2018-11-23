@@ -23,7 +23,6 @@ public class HelpMenuView extends MenuView{
 		returns: none.
 		Created by: Oswaldo Rodríguez */
 		
-	
     super("\n" +
                     "****************************\n" +
                     "  CITY OF AARON: Help Menu \n" +

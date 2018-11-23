@@ -15,15 +15,10 @@ public class ListItem implements Serializable {
     
     private String name;
     private Integer number;
-    private ArrayList<ListItem> animals;
+   
 
-    public ListItem(String cows, int i) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-  
-    
-    
-    
+ 
+ 
     public void setName(String _name)
     {
         this.name = _name;
@@ -42,15 +37,6 @@ public class ListItem implements Serializable {
     public Integer getNumber()
     {
          return number;
-    }
-      public void setAnimals(ArrayList<ListItem>  _animals)
-    {
-        this.animals = _animals;
-    } 
-    
-    public ArrayList<ListItem>  getAnimals()
-    {
-         return animals;
     }
     
 }
