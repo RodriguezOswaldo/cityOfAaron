@@ -75,7 +75,8 @@ public ListMenuView(){
    
    //Displaying the list .
    for (int i = 0; i< animalsList.size(); i++){
-   System.out.println(animalsList.get(i).getName() + " " + animalsList.get(i).getNumber());
+   System.out.println(animalsList.get(i).getName() + "\t" + animalsList.get(i).getNumber());
+   
   }
  }
     // The displayToolsList method

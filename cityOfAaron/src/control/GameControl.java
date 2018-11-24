@@ -169,7 +169,7 @@ public class GameControl {
             //Adding items to the Animals Array.
             animals.add(new ListItem("Cows", 12));
             animals.add(new ListItem("Horses", 3));
-            animals.add(new ListItem("Curelomes", 7));
+            animals.add(new ListItem("Goats", 7));
             animals.add(new ListItem("Cumomes", 4));
             
             //Save the Array into the program

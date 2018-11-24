@@ -16,7 +16,7 @@ public class ListItem implements Serializable {
     private String name;
     private Integer number;
     
-    //Constructor 
+    //Constructor for the AnimalsLists.
     public ListItem(String type, int numType) {
         
         //setting the parameter to the variables.
