@@ -19,6 +19,7 @@ public class Game implements Serializable {
     private Map theMap;
     private ArrayList<ListItem> animals;
     
+    //Default Constructors
     public Game(){}
     
     public Player getPlayer()
