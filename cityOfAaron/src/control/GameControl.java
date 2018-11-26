@@ -17,11 +17,14 @@ public class GameControl {
         // size of the Locations array
         private static final int MAX_ROW = 5;
         private static final int MAX_COL = 5;
-
+        
+        // create the game object
+        private static Game theGame = new Game();
+        
         public static void createNewGame(String _name){
             
-        // create the game object
-        Game theGame = new Game();
+        
+        
         // create the player object and set the name
         Player thePlayer = new Player();
         
@@ -163,8 +166,11 @@ public class GameControl {
         }
         //Oswaldo Created animals method 
         public static ArrayList<ListItem> createAnimalsList(){
+            
+            //Getting reference to the Game object in the CityOfAaron Class. 
+            Game theGame = CityOfAaron.getGame();
             //Creating the Game object
-            Game theGame = new Game();
+            //Game theGame = new Game();
             ArrayList<ListItem> animals = new ArrayList<ListItem>();
             //Adding items to the Animals Array.
             animals.add(new ListItem("Cows", 12));
