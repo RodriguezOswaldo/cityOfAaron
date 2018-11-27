@@ -58,11 +58,12 @@ public ListMenuView(){
         
     }
 }
-   // The displayAnimalsList method
-    // Purpose: Displays a list of Animals
-    // Parameters: none
-    // Returns: none
-    //Created by: Oswaldo Rodríguez
+
+ // The displayAnimalsList method
+ // Purpose: Displays a list of Animals
+ // Parameters: none
+ // Returns: none
+ //Created by: Oswaldo Rodríguez
  public void displayAnimalsList(){
    // System.out.println("\n *View Animals List Selected*");
    
@@ -79,18 +80,33 @@ public ListMenuView(){
    
   }
  }
-    // The displayToolsList method
-    // Purpose: Displays a list of Tools
-    // Parameters: none
-    // Returns: none
+ 
+ // The displayToolsList method
+ // Purpose: Displays a list of Tools
+ // Parameters: none
+ // Returns: none
+ // Author: Sam Wagner
  public void displayToolsList(){
-    System.out.println("\n *View a List of Tools*");
-  }
-   // The displayProvisionsList method
-    // Purpose: Displays a list of Provision
-    // Parameters: none
-    // Returns: none
- //Author: Gabriel Gonzales
+   // System.out.println("\n *View Tools List Selected*");
+   
+   //Creating the game object.
+   GameControl gameControl = new GameControl();
+   
+   //Creating the New ArrayList
+   ArrayList<ListItem> listItem = new ArrayList<ListItem>();
+   ArrayList<ListItem> toolsList = gameControl.createToolsList();
+   
+   //Displaying the list .
+   for (int i = 0; i< toolsList.size(); i++){
+     System.out.println(toolsList.get(i).getName() + "\t" + toolsList.get(i).getNumber());
+     }
+ }
+ 
+  // The displayProvisionsList method
+  // Purpose: Displays a list of Provision
+  // Parameters: none
+  // Returns: none
+  // Author: Gabriel Gonzales
   public void displayProvisionsList(){
    // System.out.println("\n *View Provision List Selected*");
    
@@ -108,7 +124,7 @@ public ListMenuView(){
   }
  }
  
-      // The displayTeamList method
+    // The displayTeamList method
     // Purpose: Displays a list of the Team
     // Parameters: none
     // Returns: none

@@ -164,6 +164,7 @@ public class GameControl {
 
             theGame.setMap(theMap);
         }
+        
         //Oswaldo Created animals method 
         public static ArrayList<ListItem> createAnimalsList(){
             
@@ -184,16 +185,15 @@ public class GameControl {
              return animals;
         }
         
-        
-           // The createProvisionsList method
-    // Purpose: creates the list of provisions
-    // Parameters: none
-    // Returns: none
+        // The createProvisionsList method
+        // Purpose: creates the list of provisions
+        // Parameters: none
+        // Returns: none
         //Author: Gabriel Gonzales
         public static ArrayList<ListItem> createProvisionsList(){
 
-            //Getting reference to the Game object in the CityOfAaron Class. 
-            Game theGame = CityOfAaron.getGame();
+        //Getting reference to the Game object in the CityOfAaron Class. 
+        Game theGame = CityOfAaron.getGame();
     
         ArrayList<ListItem> provisions = new ArrayList<>();
         //Adding items to the Provisions Array.
@@ -206,13 +206,32 @@ public class GameControl {
         
         theGame.setProvisions(provisions);
         
-      return provisions;
-}
+        return provisions;
+        } 
         
+        // The createToolsList method
+        // Purpose: creates the list of tools
+        // Parameters: none
+        // Returns: none
+        //Author: Sam Wagner
+        public static ArrayList<ListItem> createToolsList(){
+
+        //Getting reference to the Game object in the CityOfAaron Class. 
+        Game theGame = CityOfAaron.getGame();
+    
+        ArrayList<ListItem> tools = new ArrayList<>();
+        //Adding items to the Tools Array.
         
+        tools.add(new ListItem("Hammers", 5));
+        tools.add(new ListItem("Nails", 500));
+        tools.add(new ListItem("Saws", 5));
+        tools.add(new ListItem("Wheels", 10));
+        tools.add(new ListItem("Lamps", 20));
         
+        theGame.setTools(tools);
         
-        
+        return tools;
+        } 
 }
 
 

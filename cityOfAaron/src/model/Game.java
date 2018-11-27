@@ -63,4 +63,14 @@ public class Game implements Serializable {
     public void setProvisions(ArrayList<ListItem> _provisions){
         this.provisions = _provisions;
     }
+    
+    //Tools Getter and Setter
+    //Author: Sam Wagner
+    public  ArrayList<ListItem> getTools(){
+        return animals;
+    } 
+    
+    public void setTools(ArrayList<ListItem> _tools){
+        this.animals = _tools;
+    }
 }
