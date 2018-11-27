@@ -184,6 +184,35 @@ public class GameControl {
              return animals;
         }
         
+        
+           // The createProvisionsList method
+    // Purpose: creates the list of provisions
+    // Parameters: none
+    // Returns: none
+        //Author: Gabriel Gonzales
+        public static ArrayList<ListItem> createProvisionsList(){
+
+            //Getting reference to the Game object in the CityOfAaron Class. 
+            Game theGame = CityOfAaron.getGame();
+    
+        ArrayList<ListItem> provisions = new ArrayList<>();
+        //Adding items to the Provisions Array.
+        
+        provisions.add(new ListItem("Water", 200));
+        provisions.add(new ListItem("Meat", 100));
+        provisions.add(new ListItem("Shoes", 30));
+        provisions.add(new ListItem("Wheat", 20));
+        provisions.add(new ListItem("Oil", 40));
+        
+        theGame.setProvisions(provisions);
+        
+      return provisions;
+}
+        
+        
+        
+        
+        
 }
 
 

@@ -18,6 +18,7 @@ public class Game implements Serializable {
     private CropData cropData;
     private Map theMap;
     private ArrayList<ListItem> animals;
+    private ArrayList<ListItem> provisions;
     
     //Default Constructors
     public Game(){}
@@ -52,5 +53,14 @@ public class Game implements Serializable {
     
     public void setAnimals(ArrayList<ListItem> _animals){
         this.animals = _animals;
+    }
+    //Provisions 
+    //Author: Gabriel Gonzales
+    public  ArrayList<ListItem> getProvisions(){
+        return provisions;
+    } 
+    
+    public void setProvisions(ArrayList<ListItem> _provisions){
+        this.provisions = _provisions;
     }
 }

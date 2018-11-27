@@ -90,10 +90,25 @@ public ListMenuView(){
     // Purpose: Displays a list of Provision
     // Parameters: none
     // Returns: none
- public void displayProvisionsList(){
-    System.out.println("\n *View Provision List*.");
+ //Author: Gabriel Gonzales
+  public void displayProvisionsList(){
+   // System.out.println("\n *View Provision List Selected*");
+   
+   //Creating the game object.
+   GameControl gameControl = new GameControl();
+   
+   //Creating the New ArrayList
+   ArrayList<ListItem> listItem = new ArrayList<ListItem>();
+   ArrayList<ListItem> provisionList = gameControl.createProvisionsList();
+   
+   //Displaying the list .
+   for (int i = 0; i< provisionList.size(); i++){
+   System.out.println(provisionList.get(i).getName() + "\t" + provisionList.get(i).getNumber());
+   
   }
-     // The displayTeamList method
+ }
+ 
+      // The displayTeamList method
     // Purpose: Displays a list of the Team
     // Parameters: none
     // Returns: none
