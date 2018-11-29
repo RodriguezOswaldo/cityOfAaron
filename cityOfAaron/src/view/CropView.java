@@ -50,7 +50,7 @@ public class CropView {
                 CropControl.buyLand(price, toBuy, cropData);
             }
             catch(CropException e){
-                System.out.println("I am sorry señor, No puedo.");
+                System.out.println("I am sorry señor, No puedo hacerlo.");
                 System.out.println(e.getMessage());
                 paramsNotOkay = true;
 
@@ -60,11 +60,13 @@ public class CropView {
         //Output how much land we now own
         System.out.format("You now own %d acres of land, ", cropData.getAcresOwned());
     }
+    
      //The sellLandView method
     //Purpose: Interface with the user input for selling land
     //Parameters: none
     //Returns: none
     //Created By Oswaldo Rodríguez
+    //Modified By Oswaldo Rodríguez.
      public static void sellLandView(){
         
         //Get the cost of Land for this round
@@ -77,13 +79,27 @@ public class CropView {
         //Get the user's input and save it.
         int toSell;
         toSell = keyboard.nextInt();
-        
-        //Call the sellLand() method in the control later to buy the land
-        CropControl.sellLand(price, toSell, cropData);
+        boolean paramsNotOkay;
+        do{
+            paramsNotOkay = false;
+            System.out.print("\nHow many acres of land do you wish to sell?");
+            toSell = keyboard.nextInt();
+            try{
+                //Call the sellLand() method in the control layer to sell
+                CropControl.sellLand(price, toSell, cropData);
+            }
+            catch(CropException e){
+                System.out.println("I'm sorry sir, I cannot do this ");
+                System.out.println(e.getMessage());
+                paramsNotOkay = true;
+            
+            }
+        }while(paramsNotOkay);
         
         //Output how much land we now own
         System.out.format("You now own %d acres of land, ", cropData.getAcresOwned());
     }
+        
      
     //The plantCropsView method
     //Purpose: Interface with the user input for plant crops
@@ -176,19 +192,6 @@ public class CropView {
         System.out.format("Number of land owned by the city: " + acresOwned + " %n");
         System.out.format("Number of bushels per acre harvested this year: " + cropYield + " %n");
         System.out.format("Number of bushels in store: " + wheatInStore + " %n");
-}
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    }
+   
 }

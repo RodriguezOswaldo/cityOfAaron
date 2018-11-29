@@ -50,15 +50,17 @@ public class CropControl
     // Pre-conditions: acres to sell must be positive
     // and <= acresOwned
 
-    public static int sellLand(int landPrice, int acresToSell, CropData cropData)
+    public static void sellLand(int landPrice, int acresToSell, CropData cropData)throws CropException
     {
         // if acresToSell < 0, return -1
             if(acresToSell <0)
-                return -1;
+                throw new CropException("A negative value was input");
+                //return -1;
         // if acresToSell > acresOwned, return -1
             int owned = cropData.getAcresOwned(); //use the Getter method in the CropData class to get acres owned.
             if(acresToSell > owned)
-                return -1;
+                throw new CropException("You don't have enough land to sell");
+                //return -1;
         // acresOwned = acresOwned - acresToSell
             owned -= acresToSell;
             cropData.setAcresOwned(owned); // use the setter method in the cropData class to update the value of acresOwned
@@ -67,7 +69,7 @@ public class CropControl
             wheat += (acresToSell * landPrice);
             cropData.setWheatInStore(wheat); //use the setter method inn the cropData class to save wheat in store.
         // return acresOwned
-        return owned;// return this value so you can test your method against your test matrix.
+        // return this value so you can test your method against your test matrix.
     }
   
     // The buyLand method

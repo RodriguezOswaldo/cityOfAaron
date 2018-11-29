@@ -184,7 +184,7 @@ public class GameControl {
              //Sending the Value to the program that is calling it.
              return animals;
         }
-        
+         
         // The createProvisionsList method
         // Purpose: creates the list of provisions
         // Parameters: none
