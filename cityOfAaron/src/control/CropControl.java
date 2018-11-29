@@ -8,6 +8,7 @@ package control;
 
 import java.util.Random;
 import model.CropData;
+import exceptions.CropException;
 
 /**
  *
@@ -79,33 +80,25 @@ public class CropControl
     // to 17 and less than or equal to 27 
     // Team Assingment
     
-    public static int buyLand(int acresPrice, int acresToBuy, CropData cropData)
-    {
-            int totalPrice = 17;
-        // if acresToBuy < 0, return -1
-            if(acresToBuy < 0) {
-               return -1;
-            }        
-        // if acresToSell > acresOwned, return -1
-            int wheat = cropData.getWheatInStore();
-      
-            if (wheat < totalPrice){
-                return -1;
-            }
-        // acresOwned = acresOwned + acresToBuy
-            int acresOwned = cropData.getAcresOwned();
-            if (acresToBuy == 0) {
-                return acresOwned;
-            } else {
-            acresOwned += acresToBuy;
-              cropData.setAcresOwned(acresOwned);
-                 //System.out.println(acresOwned);
+    public static void buyLand(int acresPrice, int acresToBuy, CropData cropData) throws CropException
+    {       
+        // check parameters - do they meet the contract
+        if(acresToBuy < 0)
+            throw new CropException("A negative value was input");
+        int wheat = cropData.getWheatInStore();
+        if(wheat < acresToBuy * acresPrice)
+            throw new CropException("There is insufficient wheat to buy this much land");
+
+        // add the number of acres to buy to current number of acres
+        int acresOwned = cropData.getAcresOwned();
+        acresOwned += acresToBuy;
+        cropData.setAcresOwned(acresOwned);
+        
+        // deduct cost from wheatInStore
+        wheat = cropData.getWheatInStore();
+        wheat -= (acresToBuy * acresPrice);
+        cropData.setWheatInStore(wheat);
             
-             wheat -=(totalPrice * acresToBuy);
-             cropData.setWheatInStore(wheat);
-                //System.out.println(wheat);
-                return acresOwned;
-            }
     }
     
     // The feedPeople method
