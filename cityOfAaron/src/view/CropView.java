@@ -35,11 +35,11 @@ public class CropView {
         
         //Prompt the user to enter the number of acres to buy
         System.out.format("Land is selling for %d bushles per acre.%n", price);
-        System.out.println("\nHow many acres of land do you wish to buy?");
+        //System.out.println("\nHow many acres of land do you wish to buy?");
         
         //Get the user's input and save it.
         int toBuy;
-        toBuy = keyboard.nextInt();
+        //toBuy = keyboard.nextInt();
         boolean paramsNotOkay;
         do{
             paramsNotOkay = false;
@@ -74,11 +74,11 @@ public class CropView {
         
         //Prompt the user to enter the number of acres to sell
         System.out.format("Land is selling for %d bushles per acre.%n", price);
-        System.out.println("\nHow many acres of land do you wish to sell?");
+        //System.out.println("\nHow many acres of land do you wish to sell?");
         
         //Get the user's input and save it.
         int toSell;
-        toSell = keyboard.nextInt();
+        //toSell = keyboard.nextInt();
         boolean paramsNotOkay;
         do{
             paramsNotOkay = false;
