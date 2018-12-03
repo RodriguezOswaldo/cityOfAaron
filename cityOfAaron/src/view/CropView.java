@@ -126,11 +126,12 @@ public class CropView {
         System.out.format("You have planted %d acres of land, ", cropData.getAcresPlanted());
     }
       
-    //The feedPeopleView method
-    //Purpose: Interface with the user input for setting aside wheat to feed the people 
-    //Parameters: none
-    //Returns: none
-    //Created by Gabriel Gonzales
+       //The feedPeopleView method
+       //Purpose: Interface with the user input for setting aside wheat to feed the people 
+       //Parameters: none
+       //Returns: none
+       //Created by Gabriel Gonzales
+       //Modified by Sam Wagner
        public static void feedPeopleView(){
         
         //Get the cost of Land for this round //fix this comments 
@@ -138,21 +139,32 @@ public class CropView {
         
         //Prompt the user to enter the number of acres to buy //Fix this Comments 
         System.out.format("Land is selling for %d bushles per acre.%n", population);
-        System.out.println("\nHow many bushels of grain do you want to set aside to feed the people?”");
         
         //Get the user's input and save it.
         int bushelsGrain;
-        bushelsGrain = keyboard.nextInt();
-        
+        boolean paramsNotOkay;
+        do {
+            paramsNotOkay = false;
+            System.out.println("\nHow many bushels of grain do you want to set aside to feed the people?”");
+            bushelsGrain = keyboard.nextInt();
+            try {
+                //Call the buyLand() method in the control later to buy the land
+                CropControl.feedPeople(cropData, bushelsGrain);
+            }
+            catch(CropException e){
+                System.out.println("I'm sorry sir, I cannot do this ");
+                System.out.println(e.getMessage());
+                paramsNotOkay = true;
+            }
+        }while(paramsNotOkay);
+               
         cropData.setWheatForPeople(bushelsGrain);
-   
-        //Call the buyLand() method in the control later to buy the land //Fix This Comments 
-        CropControl.feedPeople(cropData, bushelsGrain);
-        
+
         //Output how many acres were planted //Fix the message down there, and make sure that this displays what it is supposed to.
         //See City of Aaron requirements to make sure 
         System.out.format("You have planted %d acres of land, ",cropData.getWheatInStore());
     }
+       
     //The runCropView method()
     //Purpose: runs the methods to manage the crops game
     //Parameters: none

@@ -110,17 +110,16 @@ public class CropControl
     // Returns: Number of bushels remaining in the store
     // Pre-conditions: Number of bushels must be positive and have enough wheat in the store  
     
-    public static int feedPeople(CropData cropData, int wheatForPeople)
+    public static int feedPeople(CropData cropData, int wheatForPeople) throws CropException
     {    
-           
-        //if wheatForPeople < 0, return -1
+        //if wheatForPeople < 0, throw exception
             if(wheatForPeople < 0){
-                 return -1;
+                 throw new CropException("A negative value was input");
             }
-        //if wheatInStore < wheatForPeople return -1
+        //if wheatInStore < wheatForPeople throw exception
             int wheatInStore = cropData.getWheatInStore();
             if(wheatForPeople > wheatInStore){
-                return -1;
+               throw new CropException("There is insufficient wheat stored.");
              }
         //wheatInStore = wheatInStore - wheatForPeople
             wheatInStore -= wheatForPeople;
