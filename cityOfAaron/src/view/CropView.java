@@ -106,25 +106,41 @@ public class CropView {
     //Parameters: none
     //Returns: none
     //Created by Sam Wagner
-      public static void plantCropsView(){
+    //Modified by Gabriel Gonzales
+    public static void plantCropsView() {
+    
+    int acresToPlant;
+    int availableAcres = cropData.getAcresOwned();
+    int availablePeople = cropData.getPopulation();
+    int wheatInStore = cropData.getWheatInStore();
+    boolean paramsNotOkay;
+    
+    do {
         
-        //Get the cost of Land for this round
-        int population = CropControl.calcLandCost();
+        paramsNotOkay = false;
+        // Prompt the user to enter the number of acres to plant
+        System.out.println("\nHow many acres of land do you want to plant?");
         
-        //Prompt the user to enter the number of acres to plant
-        System.out.format("Land is selling for %d bushles per acre.%n", population);
-        System.out.println("\nHow many acres of land do you want to plant?”");
+        // Get the user's input and save it
+        acresToPlant = keyboard.nextInt();
         
-        //Get the user's input and save it.
-        int toPlant;
-        toPlant = keyboard.nextInt();
-      
-        //Call the plantTheCrops() method in the control layer to plant the crops 
-        CropControl.plantTheCrops(toPlant, cropData);
+        try {
+            CropControl.plantCrops(acresToPlant, wheatInStore, availablePeople, cropData);
+        } catch(CropException e) {
+            System.out.println("I am sorry, I cannot do this.");
+            System.out.println(e.getMessage());
+            paramsNotOkay = true;
+        }
         
-        //Output how many acres were planted
-        System.out.format("You have planted %d acres of land, ", cropData.getAcresPlanted());
-    }
+    } while(paramsNotOkay);
+    
+    // Plant the crops
+    cropData.setAcresPlanted(acresToPlant);
+    
+    // output how many acres were planted
+    System.out.format("You have planted " + acresToPlant + " acres.");
+    
+}
       
        //The feedPeopleView method
        //Purpose: Interface with the user input for setting aside wheat to feed the people 

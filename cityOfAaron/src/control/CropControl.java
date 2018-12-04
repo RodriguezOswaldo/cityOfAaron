@@ -139,45 +139,41 @@ public class CropControl
     // 3. number of people in the city must be greater than needed (populationNeeded = acresToplant/10)
     // wheat in store must be greater than required (wheatRequired = acresToPlant/2)
     // Oswaldo Rodriguez
+    //Modified by Gabriel Gonzales
+          public static int plantCrops(int acresPlanted, int wheatInStore, int population1, CropData cropData) throws CropException {
+             int owned = cropData.getAcresOwned();
+             int planted = acresPlanted;
+             int population = population1;
+             int wheat = cropData.getWheatInStore();         
+    
+        
+        //acresPlanted > 0
+        if(planted < 0)
+              throw new CropException("A negative value was input.");        
+        
+        //acresOwned >= acresPlanted
+        if(owned < planted)
+            throw new CropException("You don't own enough acres to plant your desired amount.");
+        
+        //population >= acresPlanted / 10
+        int amount = planted / 10;
+        if(population < amount)
+            throw new CropException("The amount you want to plant is too much for the population.");        
+        
+        //wheatInStore >= acresPlanted / 2
+         if(wheat < planted / 2)
+            throw new CropException("Wheat in store is less than the acres planted.");         
+        
+        
+        //acresPlanted / 2
+        int wheatUsed = planted / 2;
+        
+        //wheatInStore  = wheatInStore - acresPlanted / 2
+        wheat = wheat - wheatUsed;
+        cropData.setWheatInStore(wheat);
+        return wheat;
 
-     public static int plantTheCrops(int acresToPlant,  CropData cropData) 
-     {
-        //If (A < 0) [Error, Enter the value again]
-            if(acresToPlant < 0)
-            {
-               return -1;
-            }
-        //If (L < A) [Error, Enter the value again]
-            int owned = cropData.getAcresOwned();
-            if(owned < acresToPlant)
-            {
-               return -1; 
-            }
-        //Population needed = Pn; Pn= A/10
-            int populationNeeded = acresToPlant/10;
-        //Population in the city = Pc (dataCrop) 
-            int population = cropData.population;
-        //If (Pc < Pn) [Error, there are not enough people, Enter a different value]. 
-            if (population < populationNeeded)
-            {
-                return -1;
-            }
-        //Wheat required = WR; WR = A/2
-            int wheatRequired = acresToPlant/2; 
-            int wheatInStore = cropData.getWheatInStore();
-        //Ws  < WR   [There are not enough bushels of wheat in storage, enter the value again].  
-            if(wheatInStore < wheatRequired)
-            {
-                return -1;
-            }
-        //Wheat in Store = Ws; Ws = Ws  - WR   
-            wheatInStore -= wheatRequired;
-        //Output: Display Acres Planted(A), and Wheat left in storage(WL)
-            cropData.setWheatInStore(wheatInStore);
-            cropData.setAcresPlanted(acresToPlant);
-           
-            return 0;            
-     }
+}
      
     // The setOffering method
     // Purpose: to get the percentage of wheat to be paid as an offering
