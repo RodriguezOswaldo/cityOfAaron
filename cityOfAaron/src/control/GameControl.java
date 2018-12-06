@@ -22,9 +22,7 @@ public class GameControl {
         private static Game theGame = new Game();
         
         public static void createNewGame(String _name){
-            
-        
-        
+           
         // create the player object and set the name
         Player thePlayer = new Player();
         
@@ -232,6 +230,29 @@ public class GameControl {
         
         return tools;
         } 
+        
+        // the getSavedGame method
+        // Purpose: load a saved game from disk
+        // Parameters: the file path
+        // Returns: none
+        // Side Effect: the game reference in the driver is updated
+        public static void getSavedGame(String filePath)
+        {
+            
+            Game theGame = null;
+
+            try (FileInputStream fips = new FileInputStream(filePath))
+            {
+                ObjectInputStream input = new ObjectInputStream(fips);
+                theGame = (Game)  input.readObject();
+                DeBryGameProject.setCurrentGame(theGame);
+            }
+            catch(Exception e)
+            {
+                System.out.println("\nThere was an error reading the saved game file");
+            }
+        }
+
 }
 
 

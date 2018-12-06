@@ -139,7 +139,7 @@ public class CropControl
     // 3. number of people in the city must be greater than needed (populationNeeded = acresToplant/10)
     // wheat in store must be greater than required (wheatRequired = acresToPlant/2)
     // Oswaldo Rodriguez
-    //Modified by Gabriel Gonzales
+    // Modified by Gabriel Gonzales
           public static int plantCrops(int acresPlanted, int wheatInStore, int population1, CropData cropData) throws CropException {
              int owned = cropData.getAcresOwned();
              int planted = acresPlanted;
