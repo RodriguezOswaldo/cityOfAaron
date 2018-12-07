@@ -8,6 +8,15 @@ package control;
 import model.*;
 import cityofaaron.CityOfAaron;
 import java.util.ArrayList;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.FileWriter;
+
 /**
  *
  * @author Own
@@ -238,20 +247,48 @@ public class GameControl {
         // Side Effect: the game reference in the driver is updated
         public static void getSavedGame(String filePath)
         {
-            
             Game theGame = null;
-
+            
             try (FileInputStream fips = new FileInputStream(filePath))
             {
                 ObjectInputStream input = new ObjectInputStream(fips);
-                theGame = (Game)  input.readObject();
-                DeBryGameProject.setCurrentGame(theGame);
+                theGame = (Game)
+                input.readObject();
+                CityOfAaron.setGame(theGame);
             }
             catch(Exception e)
             {
                 System.out.println("\nThere was an error reading the saved game file");
             }
         }
+        
+        public static void saveGame(String filePath)
+         {
+            FileWriter outFile = null;
+            String fileLocation = filePath;
+            
+            try (FileOutputStream fips = new FileOutputStream(filePath))
+            {
+                ObjectOutputStream output = new ObjectOutputStream(fips); 
+                output.writeObject(theGame);
+                output.flush();
+            }
+            catch(Exception e)
+            {
+                System.out.println("\nThere was an error reading the saved game file");
+            }
+            finally {
+                if (outFile != null){
+                    try {
+                        outFile.close();
+                    }
+                    catch (IOException e){
+                        System.out.println("Error closing file.");
+                    }
+                    
+                }
+            }
+        } 
 
 }
 
