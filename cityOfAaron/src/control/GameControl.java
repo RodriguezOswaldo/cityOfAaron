@@ -16,6 +16,8 @@ import java.io.InputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.FileWriter;
+import java.io.PrintWriter;
+
 
 /**
  *
@@ -290,6 +292,47 @@ public class GameControl {
             }
         } 
 
+        
+        //Oswaldo Created the SavingAnimalsList Method
+        /*
+        public static void savingAnimalsList(ArrayList<ListItem> animals){
+            
+                   // declare a string to hold the file name
+                        File file = new File("file.txt");
+                    
+                   // declare a reference to a PrintWriter object
+                        FileOutputStream out = new FileOutputStream("file.txt");
+                        PrintWriter writer = new PrintWriter(out);
+                    
+                   // prompt the user for a file name, get and save the user’s input
+                        String file;
+                        System.out.println("Please, type the file name: ");
+                        file = keyboard.next();
+            
+                   // create the PrintWriter object
+                        try(PrintWriter output = new PrintWriter(file)){
+                        
+                   // get a reference to the ArrayList you want to output
+                        ArrayList<ListItem>(animals);    
+                    
+                   // output a heading for the report
+                        output.println("\n\n       Animals List            ")
+                           
+                   // use a for loop to get the data from the ArrayList
+                        for (int i = 0; i< animalsList.size(); i++){
+                   
+                   // and output it
+                        output.println(animalsList.get(i).getName() + "\t" + animalsList.get(i).getNumber());
+                        output.close();
+                    }
+                  
+                } catch(Exception e){
+                        System.out.println("Error");
+                }     
+            
+        } 
+
+*/
 }
 
 
