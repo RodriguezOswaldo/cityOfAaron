@@ -17,6 +17,7 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.FileWriter;
 import java.io.PrintWriter;
+import java.util.Scanner;
 
 
 /**
@@ -28,6 +29,7 @@ public class GameControl {
         // size of the Locations array
         private static final int MAX_ROW = 5;
         private static final int MAX_COL = 5;
+        private static Scanner keyboard = new Scanner(System.in);
         
         // create the game object
         private static Game theGame = new Game();
@@ -294,45 +296,39 @@ public class GameControl {
 
         
         //Oswaldo Created the SavingAnimalsList Method
-        /*
-        public static void savingAnimalsList(ArrayList<ListItem> animals){
-            
-                   // declare a string to hold the file name
-                        File file = new File("file.txt");
-                    
-                   // declare a reference to a PrintWriter object
-                        FileOutputStream out = new FileOutputStream("file.txt");
-                        PrintWriter writer = new PrintWriter(out);
-                    
-                   // prompt the user for a file name, get and save the user’s input
-                        String file;
-                        System.out.println("Please, type the file name: ");
-                        file = keyboard.next();
-            
-                   // create the PrintWriter object
-                        try(PrintWriter output = new PrintWriter(file)){
-                        
-                   // get a reference to the ArrayList you want to output
-                        ArrayList<ListItem>(animals);    
-                    
-                   // output a heading for the report
-                        output.println("\n\n       Animals List            ")
-                           
-                   // use a for loop to get the data from the ArrayList
-                        for (int i = 0; i< animalsList.size(); i++){
-                   
-                   // and output it
-                        output.println(animalsList.get(i).getName() + "\t" + animalsList.get(i).getNumber());
-                        output.close();
-                    }
-                  
-                } catch(Exception e){
-                        System.out.println("Error");
-                }     
-            
-        } 
+    public static void savingAnimalsList(ArrayList<ListItem> animals) {
 
-*/
+        // declare a string to hold the file name
+        String file;
+
+       
+        // prompt the user for a file name, get and save the user’s input
+        System.out.println("Please, type the file name: ");
+        file = keyboard.next();
+
+        // create the PrintWriter object
+        try ( PrintWriter output = new PrintWriter(file)) {
+            
+            // output a heading for the report
+            output.println("***Animals List***\n");
+
+            // use a for loop to get the data from the ArrayList
+            for (int i = 0; i < animals.size(); i++) {
+
+                // and output it
+                output.println(animals.get(i).getName() + "\t" + animals.get(i).getNumber());
+
+            }
+
+            output.close();
+
+        } catch (Exception e) {
+            System.out.println("Error");
+        }
+
+    }
+
+
 }
 
 

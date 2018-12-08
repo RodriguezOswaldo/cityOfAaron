@@ -31,7 +31,8 @@ public ListMenuView(){
                 + " 2 - List or View the tools in the storehouse\n"
                 + " 3 - List or View the provisions in the storehouse\n"
                 + " 4 - List or View the authors of this game\n"
-                + " 5 - Return to the Main Menu\n"
+                + " 5 - Save the animals list to the disk\n"
+                + " 6 - Return to the Main Menu\n"
                 ,5);        
     }
     // The doAction method
@@ -52,6 +53,9 @@ public ListMenuView(){
         break;
       case 4: // display the Authors list
         displayTeamList();
+        break;
+      case 5: // Save the  the Authors list
+        GameControl.savingAnimalsList(GameControl.createAnimalsList());
         break;
        case 6: // back to main menu
          break;
