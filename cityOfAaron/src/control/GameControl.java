@@ -218,7 +218,7 @@ public class GameControl {
         theGame.setProvisions(provisions);
         
         return provisions;
-        } 
+        }
         
         // The createToolsList method
         // Purpose: creates the list of tools
@@ -326,9 +326,42 @@ public class GameControl {
             System.out.println("Error");
         }
 
-    }
-
-
+    }               
+         //method to save the provision list to disk 
+    //Author: Gabriel Gonzales
+        public static void saveProvisionList() {
+            Scanner keyboard = new Scanner(System.in);
+            //receive a string of the file name, passed into the printing routine.
+            String listPath;
+            System.out.println("Please enter a file path for the Provision list: ");
+            listPath = keyboard.next();
+            
+            
+            //declare a reference to a PrintWriter object
+            try (PrintWriter out = new PrintWriter(listPath);) {
+                //create the PrintWriter object
+                
+                //get a reference to the ArrayList
+                ArrayList<ListItem> provisions = theGame.getProvisions();
+                
+                //output a heading for the report
+                out.println("\n\n Provision List      "); 
+                //use a for loop to get the data from the ArrayList
+                for (ListItem item : provisions) {
+                out.printf("%n%-20s%7d", item.getName()
+                                             , item.getNumber());
+            
+                }
+                
+                //output it
+            }
+            catch(Exception e) {
+                //output error message
+                System.out.println("Error saving list to file.");
+            }
+            
+        }   
+  
 }
 
 

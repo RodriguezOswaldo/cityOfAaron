@@ -8,6 +8,7 @@ package view;
 import java.util.Scanner;
 import java.util.ArrayList;
 import control.*;
+import static control.GameControl.saveProvisionList;
 import model.ListItem;
 
 /**
@@ -32,8 +33,9 @@ public ListMenuView(){
                 + " 3 - List or View the provisions in the storehouse\n"
                 + " 4 - List or View the authors of this game\n"
                 + " 5 - Save the animals list to the disk\n"
-                + " 6 - Return to the Main Menu\n"
-                ,5);        
+                + " 6 - Save the Provision List to the disk\n"
+                + " 7 - Return to the Main Menu\n"
+                ,6);        
     }
     // The doAction method
     // Purpose: performs the selected action
@@ -57,9 +59,12 @@ public ListMenuView(){
       case 5: // Save the  the Authors list
         GameControl.savingAnimalsList(GameControl.createAnimalsList());
         break;
-       case 6: // back to main menu
+       case 6: // Save ProvisionList
+         saveProvisionList();
          break;
-        
+        case 7: // Back to main menu
+         saveProvisionList();
+         break;
     }
 }
 
