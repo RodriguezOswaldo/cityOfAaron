@@ -63,7 +63,6 @@ public ListMenuView(){
          saveProvisionList();
          break;
         case 7: // Back to main menu
-         saveProvisionList();
          break;
     }
 }
