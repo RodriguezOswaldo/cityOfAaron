@@ -295,7 +295,7 @@ public class GameControl {
         } 
 
         
-        //Oswaldo Created the SavingAnimalsList Method
+    //Oswaldo Created the SavingAnimalsList Method
     public static void savingAnimalsList(ArrayList<ListItem> animals) {
 
         // declare a string to hold the file name
@@ -327,8 +327,8 @@ public class GameControl {
         }
 
     }               
-         //method to save the provision list to disk 
-    //Author: Gabriel Gonzales
+        //method to save the provision list to disk 
+        //Author: Gabriel Gonzales
         public static void saveProvisionList() {
             Scanner keyboard = new Scanner(System.in);
             //receive a string of the file name, passed into the printing routine.
@@ -360,7 +360,36 @@ public class GameControl {
                 System.out.println("Error saving list to file.");
             }
             
-        }   
+        }  
+        
+        //Method saves the tools list to disk
+        //Author: Sam Wagner
+        public static void savingToolsList(ArrayList<ListItem> tools) {
+            // declare a string to hold the file name
+            String file;
+            // prompt the user for a file name, get and save the user’s input
+            System.out.println("Please, type the file name: ");
+            file = keyboard.next();
+
+            // create the PrintWriter object
+            try (PrintWriter output = new PrintWriter(file)) {
+
+                // output a heading for the report
+                output.println("Tools List\n");
+
+                // use a for loop to get the data from the ArrayList
+                for (int i = 0; i < tools.size(); i++) {
+                    // and output it
+                    output.println(tools.get(i).getName() + "\t" + tools.get(i).getNumber());
+                }
+                
+                output.close();
+
+            } catch (Exception e) {
+                System.out.println("Error");
+        }
+
+    }               
   
 }
 

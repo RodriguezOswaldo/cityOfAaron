@@ -34,8 +34,9 @@ public ListMenuView(){
                 + " 4 - List or View the authors of this game\n"
                 + " 5 - Save the animals list to the disk\n"
                 + " 6 - Save the Provision List to the disk\n"
-                + " 7 - Return to the Main Menu\n"
-                ,6);        
+                + " 7 - Save the Tools List to the disk\n"
+                + " 8 - Return to the Main Menu\n"
+                ,8);        
     }
     // The doAction method
     // Purpose: performs the selected action
@@ -62,7 +63,9 @@ public ListMenuView(){
        case 6: // Save ProvisionList
          saveProvisionList();
          break;
-        case 7: // Back to main menu
+       case 7:
+         GameControl.savingToolsList(GameControl.createToolsList());  
+        case 8: // Back to main menu
          break;
     }
 }
