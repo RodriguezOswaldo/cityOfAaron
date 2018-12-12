@@ -14,10 +14,18 @@ package model;
 import java.io.Serializable;
 public class Player implements Serializable {
     
+    //Data Member
     private String name;
+    
+    //Data Members for the Location of the player
+    private int row;
+    private int column;
+    
+    //Public Constructor 
     
     public Player(){}
     
+    //Getter and Setters for the Name Data Member
     public String getName()
     {
          return name;
@@ -25,4 +33,19 @@ public class Player implements Serializable {
     public void setName(String _name){
         this.name = _name;
     }  
+    
+    //Getter and Setters for the row & column Location
+    public int getRow(){
+        return row;
+    }
+    public void setRow(int _row){
+        this.row = _row;
+    }
+    
+    public int getColumn(){
+        return column;
+    }
+    public void setColumn(int _column){
+        this.column = _column;
+    }
 }
