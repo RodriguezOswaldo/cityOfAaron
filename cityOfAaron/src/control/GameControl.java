@@ -377,24 +377,18 @@ public class GameControl {
     // Returns: none
     //Created by Oswaldo Rodríguez
     
-    public static void setCoordinates(int _row, int _column) {
+    public static void setCoordinates() {
 
         // create the player object and set the name
         Player thePlayer = new Player();
 
         // save reference to the player object in the player
-        thePlayer.setRow(_row);
+        thePlayer.setRow(0);
 
         // save reference to the player object in the player
-        thePlayer.setColumn(_column);
-
-        // save reference to the player object in the game
-        theGame.setPlayer(thePlayer);
-
-        //Set coordinates 
-        thePlayer.setRow(0);
         thePlayer.setColumn(0);
 
+       
     }
 
 }

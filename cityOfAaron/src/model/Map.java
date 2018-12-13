@@ -45,7 +45,7 @@ public class Map {
     // Returns: void
     public void setLocation(int row, int col, Location _location)
     {
-        locations[row][col] = _location;
+        locations[row][col] =  _location;
     } 
 
  
