@@ -43,6 +43,14 @@ public class GameControl {
         thePlayer.setName(_name);
         // save reference to the player object in the game
         theGame.setPlayer(thePlayer);
+        
+        // create the player object and set the name
+        //Map theMap = new Map();
+
+        // save reference to the player object in the player
+        //theMap.setMap(int x, int y);
+        // save reference to the player object in the game
+        //theGame.setMap(thePlayer);
 
         // create and initialize a CropData object
         CropData cropData = new CropData();
