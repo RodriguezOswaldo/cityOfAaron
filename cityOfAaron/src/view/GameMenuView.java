@@ -107,30 +107,30 @@ public class GameMenuView extends MenuView {
         
         System.out.println("Enter the y-coordinate:\n ");
         y = keyboard.nextInt();
-        System.out.println("Something 1");
+      
         
         //Setting new coordinates in the Player object.
         thePlayer.setRow(x);
-        System.out.println("Something 2");
+      
         thePlayer.setColumn(y);
-        System.out.println("Something 3");
+        
         //Bringing the player to the game
         theGame.setPlayer(thePlayer);
-        System.out.println("Something 4");
+        
         //Updating the game
         CityOfAaron.setGame(theGame);
-       System.out.println("Something 5");
+      
        
         
         Map theMap = theGame.getMap();
-        System.out.println("Something 6");
-        Location theLocation = theMap.getLocation(y, y);
-        System.out.println("Something 7");
+        
+        Location theLocation = theMap.getLocation(x, y);
+        
         String theDescription = theLocation.getDescription();
-        System.out.println("Something 8");
+        
         //Display the description 
         System.out.println(theGame.getMap().getLocation(x, y).getDescription());
-        System.out.println("Something 9");
+        
     }
 
     // The manageCrops method
