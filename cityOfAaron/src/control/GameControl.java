@@ -53,6 +53,7 @@ public class GameControl {
         //theGame.setMap(thePlayer);
 
         // create and initialize a CropData object
+        /*
         CropData cropData = new CropData();
 
         cropData.setYear(0);
@@ -69,7 +70,7 @@ public class GameControl {
         cropData.setOfferingBushels(300);
 
         // save a reference to it in the Game object
-        theGame.setCropData(cropData);
+        theGame.setCropData(cropData);*/
 
         // when all is done, save a reference to the Game object
         CityOfAaron.setGame(theGame);
