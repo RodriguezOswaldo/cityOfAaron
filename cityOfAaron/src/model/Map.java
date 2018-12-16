@@ -16,6 +16,8 @@ public class Map {
      private Location[][] locations;       // a reference to a 2-dimensional array
                                            // of Location objects
      
+     // default Map constructor
+     public Map(){}
     // default Map constructor
     // Purpose: Sets row and column values
     //          and creates an array of Location objects

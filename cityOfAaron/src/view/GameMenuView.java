@@ -116,17 +116,24 @@ public class GameMenuView extends MenuView {
         
         //Bringing the player to the game
         theGame.setPlayer(thePlayer);
+        System.out.println("something 1 ");
         
-        //Updating the game
+        //Updating the game with the new position of the player.
         CityOfAaron.setGame(theGame);
-      
+            System.out.println("Something 2");
        
-        
+        //getting the map from th game 
         Map theMap = theGame.getMap();
+        System.out.println("Something 3");
         
+        //getting theLocation from theMap
         Location theLocation = theMap.getLocation(x, y);
         
+        System.out.println("Something 4");
+        
+        //gettind theDescription of the location.
         String theDescription = theLocation.getDescription();
+        System.out.println("Something 5");
         
         //Display the description 
         System.out.println(theGame.getMap().getLocation(x, y).getDescription());

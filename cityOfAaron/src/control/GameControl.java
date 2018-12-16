@@ -29,6 +29,7 @@ public class GameControl {
     // size of the Locations array
     private static final int MAX_ROW = 5;
     private static final int MAX_COL = 5;
+    
     private static Scanner keyboard = new Scanner(System.in);
 
     // create the game object
@@ -41,19 +42,23 @@ public class GameControl {
 
         // save reference to the player object in the player
         thePlayer.setName(_name);
+        
+        //thePlayer.setRow(0);
+        //thePlayer.setColumn(0);
         // save reference to the player object in the game
         theGame.setPlayer(thePlayer);
         
-        // create the player object and set the name
+        // create the Map object and set the Map
         //Map theMap = new Map();
 
-        // save reference to the player object in the player
-        //theMap.setMap(int x, int y);
+        // save reference to the map object in the map
+        //theMap.setLocation(0, 0, Location[][]);
+        
         // save reference to the player object in the game
-        //theGame.setMap(thePlayer);
+        //theGame.setMap(theMap);
 
         // create and initialize a CropData object
-        /*
+        
         CropData cropData = new CropData();
 
         cropData.setYear(0);
@@ -70,7 +75,7 @@ public class GameControl {
         cropData.setOfferingBushels(300);
 
         // save a reference to it in the Game object
-        theGame.setCropData(cropData);*/
+        theGame.setCropData(cropData);
 
         // when all is done, save a reference to the Game object
         CityOfAaron.setGame(theGame);
@@ -386,7 +391,7 @@ public class GameControl {
     // Returns: none
     //Created by Oswaldo Rodríguez
     
-    public static void setCoordinates() {
+    public static void setLocation() {
 
         // create the player object and set the name
         Player thePlayer = new Player();
