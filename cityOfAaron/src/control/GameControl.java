@@ -391,7 +391,7 @@ public class GameControl {
     // Returns: none
     //Created by Oswaldo Rodríguez
     
-    public static void setLocation() {
+    public static void setCoordinates() {
 
         // create the player object and set the name
         Player thePlayer = new Player();

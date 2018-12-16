@@ -135,8 +135,10 @@ public class GameMenuView extends MenuView {
         String theDescription = theLocation.getDescription();
         System.out.println("Something 5");
         
+        //theGame.getMap().getLocation(x, y).getDescription()
+        
         //Display the description 
-        System.out.println(theGame.getMap().getLocation(x, y).getDescription());
+        System.out.println(theDescription);
         
     }
 
