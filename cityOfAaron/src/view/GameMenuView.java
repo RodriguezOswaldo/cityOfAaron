@@ -124,6 +124,7 @@ public class GameMenuView extends MenuView {
     // Purpose: display the move to new location options.
     // Parameters: none
     // Returns: none
+    // Author: Oswaldo Rodriguez
     // ===================================  
     public void moveToNewLocation() {
         

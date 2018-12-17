@@ -19,6 +19,7 @@ public class Game implements Serializable {
     private Map theMap;
     private ArrayList<ListItem> animals;
     private ArrayList<ListItem> provisions;
+    private ArrayList<ListItem> tools;
     
     //Default Constructors
     public Game(){}
@@ -67,10 +68,10 @@ public class Game implements Serializable {
     //Tools Getter and Setter
     //Author: Sam Wagner
     public  ArrayList<ListItem> getTools(){
-        return animals;
+        return tools;
     } 
     
     public void setTools(ArrayList<ListItem> _tools){
-        this.animals = _tools;
+        this.tools = _tools;
     }
 }
