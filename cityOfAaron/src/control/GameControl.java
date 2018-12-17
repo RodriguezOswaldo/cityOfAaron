@@ -27,8 +27,8 @@ import java.util.Scanner;
 public class GameControl {
 
     // size of the Locations array
-    private static final int MAX_ROW = 5;
-    private static final int MAX_COL = 5;
+    public static final int MAX_ROW = 5;
+    public static final int MAX_COL = 5;
     
     private static Scanner keyboard = new Scanner(System.in);
 
@@ -116,11 +116,6 @@ public class GameControl {
         // create the game object
         Game theGame = new Game();
 
-        //|||||
-        //|||||
-        //|||||
-        //|||||
-        //|||||
         //#1 - THE RIVER
         // create a string that will go in the Location objects
         // that contain the river
@@ -183,6 +178,7 @@ public class GameControl {
         }
 
         theGame.setMap(theMap);
+
     }
 
     //Oswaldo Created animals method 

@@ -74,10 +74,40 @@ public class GameMenuView extends MenuView {
     // Purpose: displays the Map
     // Parameters: none
     // Returns: none
+    // Author: Sam
     // ===================================     
     public void viewMap() {
         //display the Map
-        System.out.println("\nHere's your map.");
+        Game game = new Game();
+        Map theMap = new Map();
+        Location loc = new Location();
+        
+        System.out.println("***Your Map***");
+ 
+        int matrix[][] = new int[5][5];
+        
+        for(int i = 0; i < matrix.length; i++)
+        {
+            for(int j = 0; j < matrix.length; j++)
+            {
+               matrix[i][j] = 5;
+            }
+        }
+        
+        for(int i = 0; i < matrix.length; i++)
+        {
+            for(int j = 0; j < matrix.length; j++)
+            {
+               System.out.print (matrix[i][j] + "");
+            }
+            System.out.println();
+        }
+        
+        System.out.println("Key \n"
+                + "~~~  = river \n"
+                + "!!!  = farmland \n"
+                + "___  = desert \n"
+                + "<><> = village \n");
     }
 
     // The viewList method
